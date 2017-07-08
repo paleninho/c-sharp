@@ -1,0 +1,181 @@
+/* Including styles files */
+
+
+
+/* Including fonts */
+@font-face
+	src: url('../../fonts/')
+	font-family: 
+	font-weight: 
+
+
+
+/* Global settings */
+$font-size: 16px
+$font-family-1: 'Tahoma', sans-serif
+$color-1: #000
+
+
+
+*
+	padding: 0
+	margin: 0
+	border: 0
+	box-sizing: border-box
+
+body
+	font-size: $font-size
+	font-family: $font-family-1
+	color: $color-1
+	background: white
+
+header, nav, main, section, article, aside, footer, li, .block
+	display: block
+
+.inline-block
+	display: inline-block
+
+.hidden
+	display: none
+
+
+
+h1, h2, h3, h4, h5, h6
+	font-size: inherit
+	font-weight: inherit
+
+
+ul
+	font-size: 0
+	li
+		font-size: $font-size
+		list-style-type: none
+
+
+
+a
+	color: $color-1
+	text-decoration: none
+	border-bottom: 1px solid transparent
+	transition: border-bottom .3s
+
+
+.icon
+	display: inline-block
+	vertical-align: middle
+
+.input, .button, .slick-slide
+	outline: none
+
+/* Grid */
+.container
+	width: 1200px
+	padding-left: 15px
+	padding-right: 15px
+
+.row, .clearfix
+	&:before, &:after
+		display: table
+		content: ''
+		box-sizing: border-box
+	&:after
+		clear: both
+
+.row
+	&_inline
+		font-size: 0
+		> .col
+			display: inline-block
+			vertical-align: top
+			font-size: $font-size
+	&_2
+		width: (100% / 2)
+	&_3
+		width: (100% / 3)
+	&_4
+		width: (100% / 4)
+	&_5
+		width: (100% / 5)
+	&_6
+		width: (100% / 6)
+
+.col
+	float: left
+	display: block
+	min-height: 1px
+
+
+
+
+
+/* Form elements */
+.input
+	font-size: $font-size
+	font-family: $font-family-1
+	background: white
+	border: 1px solid #f0f0f0
+	&:focus
+		
+	&_error
+		border-color: red
+
+.textarea
+	font-size: $font-size
+	font-family: $font-family-1
+	display: block
+	background: white
+	resize: none
+	border: 1px solid #f0f0f0
+	&_error
+		border-color: red
+
+
+.button
+	font-size: $font-size
+	font-family: $font-family-1
+	transition: .3s
+
+
+.input, .textarea
+	transition: border-color .3s
+
+
+
+::placeholder
+	color: $color-1
+
+
+
+
+/* Blocks align */ 
+.left
+	float: left
+
+.right
+	float: right
+
+.center, .container
+	margin-left: auto
+	margin-right: auto
+
+
+/* Text */ 
+.text-left
+	text-align: left
+
+.t-right
+	text-align: right
+
+.t-center
+	text-align: center
+
+.normal
+	font-weight: 400
+
+.bold
+	font-weight: 700
+
+.italic
+	font-style: italic
+
+
