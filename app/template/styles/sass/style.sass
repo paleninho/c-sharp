@@ -69,7 +69,7 @@ a
 
 /* Grid */
 .container
-	width: 1200px
+	width: (1200px + 30px)
 	padding-left: 15px
 	padding-right: 15px
 
@@ -81,28 +81,21 @@ a
 	&:after
 		clear: both
 
-.row
-	&_inline
-		font-size: 0
-		> .col
-			display: inline-block
-			vertical-align: top
-			font-size: $font-size
-	&_2
-		width: (100% / 2)
-	&_3
-		width: (100% / 3)
-	&_4
-		width: (100% / 4)
-	&_5
-		width: (100% / 5)
-	&_6
-		width: (100% / 6)
-
 .col
 	float: left
 	display: block
 	min-height: 1px
+	&-1
+		width: (100% / 1)
+	&-2
+		width: (100% / 2)
+	&-3
+		width: (100% / 3)
+	&-4
+		width: (100% / 4)
+	&-5
+		width: (100% / 5)
+
 
 
 
@@ -134,6 +127,7 @@ a
 	font-size: $font-size
 	font-family: $font-family-1
 	transition: .3s
+	cursor: pointer
 
 
 .input, .textarea
@@ -157,25 +151,3 @@ a
 .center, .container
 	margin-left: auto
 	margin-right: auto
-
-
-/* Text */ 
-.text-left
-	text-align: left
-
-.t-right
-	text-align: right
-
-.t-center
-	text-align: center
-
-.normal
-	font-weight: 400
-
-.bold
-	font-weight: 700
-
-.italic
-	font-style: italic
-
-
