@@ -1,5 +1,8 @@
 /* Including styles files */
-
+@import url('../../libs/fancybox/dist/jquery.fancybox.css')
+@import url('../../libs/animate.css/animate.css')
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,500,500i,700,800&subset=cyrillic')
+@import sprite.sass
 
 
 /* Including fonts */
@@ -11,8 +14,8 @@
 
 
 /* Global settings */
-$font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
+$font-size: 18px
+$font-family-1: 'Fira Sans', sans-serif
 $color-1: #000
 
 
@@ -48,6 +51,7 @@ h1, h2, h3, h4, h5, h6
 ul
 	font-size: 0
 	li
+		display: inline-block
 		font-size: $font-size
 		list-style-type: none
 
@@ -69,7 +73,7 @@ a
 
 /* Grid */
 .container
-	width: (1200px + 30px)
+	width: (1140px + 30px)
 	padding-left: 15px
 	padding-right: 15px
 
@@ -95,22 +99,19 @@ a
 		width: (100% / 4)
 	&-5
 		width: (100% / 5)
-
-
-
-
+ 
 
 
 /* Form elements */
 .input
+	display: block
 	font-size: $font-size
 	font-family: $font-family-1
 	background: white
-	border: 1px solid #f0f0f0
-	&:focus
-		
-	&_error
-		border-color: red
+	width: 100%
+	font-weight: 500
+	border-radius: 3px
+	padding: 10.5px 13px
 
 .textarea
 	font-size: $font-size
@@ -124,19 +125,95 @@ a
 
 
 .button
+	position: relative
+	display: block
 	font-size: $font-size
 	font-family: $font-family-1
 	transition: .3s
 	cursor: pointer
-
-
+	padding-left: 20px
+	padding-right: 20px
+	margin-left: auto
+	margin-right: auto
+	text-align: center
+	transition: .3s
+	&_blue
+		text-transform: uppercase
+		line-height: 55px
+		background: url('../../img/bg/button-blue-2.png') no-repeat center bottom, #3be3e2
+		border-radius: 3px
+		font-size: 25px
+		text-transform: uppercase
+		font-weight: 700
+		&:hover
+			background-size: 500%
+	&_yellow
+		font-size: 20px
+		font-weight: 500
+		border-radius: 3px
+		box-shadow: 1px 11px 29px rgba(0, 0, 0, 0.21)
+		width: 100%
+		padding: 17px 5px
+		background: url('../../img/bg/button-yellow.png') no-repeat center
+		background-size: 100%
+		&:hover
+			background-size: 500%
+	&_transparent
+		width: 211px
+		height: 47px
+		line-height: 45px
+		border-radius: 3px
+		border: 2px solid #eebb44
+		color: white
+		font-size: 15px
+		font-weight: 300
+		&:hover
+			background: #eebb44
+	&:hover
+		background-size: 500%
+	.btn-count
+		position: absolute
+		display: block
+		width: 47px
+		height: 47px
+		line-height: 50px
+		border-radius: 50%
+		font-size: 36px
+		text-align: center
+		font-weight: 500
+		top: -21px
+		right: -10px
+		text-shadow: none
+		&:before
+			position: absolute
+			content: ''
+			left: -10px
+			bottom: -2px
+	.btn-count_yellow
+		background-color: #f4ad00
+		&:before
+			@include sprite($arrow-yellow)
+	.btn-count_blue
+		background-color: #50c1c1
+		&:before
+			@include sprite($arrow-blue)
+	.btn-count_white
+		background-color: white
+		color: #eeb010
+		top: -26px
+		right: -33px
+		&:before
+			@include sprite($arrow-white)
+			left: -8px
+			bottom: 0
 .input, .textarea
 	transition: border-color .3s
 
-
+a
+	transition: .3s
 
 ::placeholder
-	color: $color-1
+	color: #878686
 
 
 
@@ -151,3 +228,777 @@ a
 .center, .container
 	margin-left: auto
 	margin-right: auto
+
+.panel
+	padding-top: 30px
+	padding-bottom: 8px
+	color: white
+	background-color: #ffffff
+	background-image: linear-gradient(180deg, #fcdfa2 0%, #fcdfa2 0%, #d39706 100%)
+	&__logo
+		margin-right: 37px
+	&__contacts
+		position: relative
+		min-width: 200px
+		text-align: right
+	&__socials
+		position: absolute
+		top: -30px
+		right: 0
+		a
+			display: block
+			width: 31px
+			height: 41px
+			background: url('../../img/bg/sn.png') no-repeat center bottom
+			text-align: center
+			padding-top: 13px
+			margin-left: 2px
+			transition: .3s
+			&:hover
+				height: 33px
+				.icon
+					position: relative
+					top: -8px
+		.icon
+			transition: .3s
+			top: 0
+
+	&__phone
+		padding-top: 20px
+		p
+			font-size: 15px
+		.callback
+			color: white
+			transition: .3s
+			&:hover
+				border-color: white
+		.phone
+			font-size: 25px
+
+.share
+	padding-top: 8px
+	&__title
+		font-size: 30px
+	&__text
+		position: relative
+		font-style: italic
+		font-weight: 500
+		color: #000
+		height: 61px
+		top: -12px
+		min-width: 616px
+		font-size: 15px
+		padding-top: 10px
+		padding-left: 10px
+		background: url('../../img/bg/share.png') no-repeat
+		span
+			position: relative
+			top: 4px
+			margin-left: 2px
+			font-size: 28px
+			font-weight: 600
+			font-style: normal
+			color: #6cd8d7
+	&__title, &__text
+		display: inline-block
+		vertical-align: top
+
+.countdown
+	div
+		display: inline-block
+
+.ds-element
+	display: inline-block
+.ds-element-days, .ds-element-hours
+	display: none !important
+.ds-element-minutes
+	&:after
+		content: ':'
+		display: inline-block
+.header
+	background: url('../../img/bg/header.png') no-repeat center top
+	background-size: cover
+	text-align: center
+	color: white
+	padding-bottom: 120px
+	position: relative
+	&:after
+		position: absolute
+		content: ''
+		background: url('../../img/bg/triangles.png') no-repeat bottom center
+		height: 63px
+		width: 100%
+		bottom: 0
+		left: 0
+		background-size: 100% auto
+	.container
+		position: relative
+	&__title
+		font-size: 43px
+		font-weight: bold
+		text-transform: uppercase
+		background-color: rgba(0,0,0,0.41)
+		max-width: 1116px
+		margin-left: auto
+		margin-right: auto
+		padding-top: 10px
+		padding-bottom: 9px
+		margin-bottom: 9px
+		span
+			color: #6ae5e5
+	&__desc
+		font-size: 30px
+		max-width: 477px
+		margin-left: auto
+		margin-right: auto
+		background-color: rgba(0,2,6,0.35)
+		text-align: center
+		padding-top: 5px
+		padding-bottom: 5px
+		margin-bottom: 147px
+	&__button
+		height: 55px
+		line-height: 55px
+		max-width: 293px
+		padding-top: 18px
+		background-image: url("../../img/bg/button-blue-1.png")
+		&-desc
+			font-size: 15px
+			font-weight: 300
+			font-style: italic
+			margin-top: 10px
+	&__popup
+		position: absolute
+		bottom: -50px
+		right: -81px
+.nav
+	font-weight: 500
+	padding-top: 18px
+	padding-bottom: 142px
+	li
+		margin-left: 35px
+		margin-right: 35px
+	a
+		color: white
+		&:hover
+			color: #eecb38
+
+.popup
+	display: none
+	z-index: 999
+	width: 360px
+	border: 3px solid #ffffff
+	border-radius: 3px
+	&__bg
+		opacity: .5
+		z-index: 1
+		position: fixed
+		width: 100%
+		height: 100%
+		// background: black
+		left: 0
+		top: 0
+	&__wrap
+		position: relative
+		z-index: 2
+		margin: 6px
+		border-radius: 3px
+		padding: 23px 26px 26px
+		background-image: linear-gradient(180deg, #a1f9f8 0%, #0d9392 100%)
+	&__title
+		font-size: 25px
+		font-weight: 500
+		margin-bottom: 15px
+		text-align: center
+	&__input
+		margin-bottom: 15px
+	&__button
+		// margin-top: 30px 
+
+.text-zakaz
+	width: 149px
+	height: 23px
+	margin-left: auto
+	margin-right: auto
+	background: url('../../img/bg/text-zakaz.png') no-repeat center
+
+
+.title
+	font-size: 30px
+	text-transform: uppercase
+	font-weight: 700
+	text-align: center
+
+.advantages
+	padding-top: 40px
+	padding-bottom: 70px
+	background: url('../../img/bg/macs.png') no-repeat right 60px
+	max-width: 1440px
+	margin-left: auto
+	margin-right: auto
+	&__title
+		padding-bottom: 50px
+	&__list
+		width: 750px
+		margin-left: -58px
+		.col
+			&:nth-of-type(odd)
+				.advantages
+					&__item
+						width: 355px
+	&__item
+		margin-bottom: 62px
+	&__icon
+		position: relative
+		width: 108px
+		height: 108px
+		line-height: 108px
+		text-align: center
+		background: url('../../img/bg/advantages-wrap.png') no-repeat left top
+		box-shadow: 5px 9px 8px 1px rgba(0, 0, 0, 0.1)
+		border-radius: 50%
+		margin-right: 21px
+		&:after
+			position: absolute
+			content: ''
+			background: url('../../img/bg/arrow-right.png') no-repeat
+			width: 27px
+			height: 22px
+			top: 40px
+			right: -13px
+	&__text
+		line-height: 23px
+		font-size: 20px
+		font-weight: 500 
+	&__icon, &__text
+		display: inline-block
+		vertical-align: middle
+
+.get
+	background: url('../../img/bg/get.png') no-repeat center
+	background-size: cover
+	padding-top: 40px
+	padding-bottom: 30px
+	&__title
+		padding-bottom: 45px
+	&__list
+		.col
+			&:nth-of-type(odd)
+				margin-left: 83px
+			&:nth-of-type(even)
+				float: right
+				margin-right: 18px
+	&__item
+		position: relative
+		z-index: 2
+		background-color: #011731
+		width: 470px
+		height: 145px
+		color: white
+		margin-bottom: 50px
+		padding: 25px 10px 10px 19px
+		&:before
+			z-index: 1
+			position: absolute
+			content: ''
+			@include sprite($list)
+			bottom: 18px
+			left: -73px
+	&__subtitle
+		color: #2af4f6
+		font-size: 20px
+		line-height: 25px 
+		font-style: italic
+		margin-bottom: 23px
+	&__text
+		font-size: 15px
+		line-height: 20px
+	&__count
+		position: absolute
+		font-size: 46px
+		font-weight: 600
+		top: 15px
+		right: 23px
+
+.portfolio
+	padding-bottom: 60px
+	.container
+		position: relative
+	&__title
+		font-size: 36px
+		font-weight: 500
+		text-transform: uppercase
+		text-align: center
+		padding-top: 20px
+		padding-bottom: 25px
+	&__list
+		position: relative
+		height: 568px
+	&__item
+		position: absolute
+		&:hover
+			.portfolio__wrap
+				opacity: 1
+		&:nth-of-type(1)
+			top: 0
+			left: 0
+			.portfolio
+				&__wrap
+					padding-top: 30px
+		&:nth-of-type(2)
+			top: 190px
+			left: 0
+			.portfolio
+				&__wrap
+					padding-top: 30px
+		&:nth-of-type(3)
+			top: 380px
+			left: 0
+			.portfolio
+				&__wrap
+					padding-top: 30px
+		&:nth-of-type(4)
+			top: 0
+			left: 350px
+			.portfolio
+				&__wrap
+					padding-top: 150px
+				&__subtitle
+					margin-bottom: 27px
+					&:before
+						margin-bottom: 70px
+		&:nth-of-type(5)
+			right: 253px
+			top: 175px
+			.portfolio
+				&__wrap
+					padding-top: 15px
+				&__subtitle
+					margin-bottom: 10px
+					&:before
+						margin-bottom: 10px
+		&:nth-of-type(6)
+			right: 253px
+			top: 0
+			.portfolio
+				&__wrap
+					padding-top: 15px
+				&__subtitle
+					margin-bottom: 10px
+					&:before
+						margin-bottom: 10px
+		&:nth-of-type(7)
+			top: 0
+			right: 0
+			.portfolio
+				&__wrap
+					padding-top: 80px
+				&__subtitle
+					margin-bottom: 25px
+					&:before
+						margin-bottom: 20px
+
+		&:nth-of-type(8)
+			bottom: 0
+			right: 0
+			.portfolio
+				&__wrap
+					padding-top: 50px
+
+	&__wrap
+		opacity: 0
+		background-color: #000000
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		transition: .3s
+		color: white
+		text-align: center
+		.portfolio__subtitle
+			font-size: 23px
+			line-height: 30px
+			padding-left: 10px
+			padding-right: 10px
+			margin-bottom: 20px
+			&:before
+				display: block
+				content: ''
+				width: 125px
+				height: 17px
+				margin-left: auto
+				margin-right: auto
+				margin-bottom: 15px
+				background: url('../../img/bg/text-lp-white.png') no-repeat center
+	&__img
+		img
+			display: block
+	&__popup
+		position: absolute
+		right: 20px
+		bottom: -9px
+
+	&__button-popup
+		margin-top: 60px
+		width: 348px
+		height: 64px
+		line-height: 64px
+		border-radius: 3px
+		background-color: #3be3e2
+		text-align: center
+		font-size: 28px
+		font-weight: 500
+		background: url('../../img/bg/button-blue-2.png') no-repeat center
+		.btn-count
+			color: white
+
+
+.price
+	color: white
+	background: url('../../img/bg/price.png') no-repeat top center
+	background-size: cover
+	padding-top: 23px
+	padding-bottom: 48px
+	.container
+		position: relative
+	&__title
+		margin-bottom: 40px 
+		span
+			display: block
+			width: 122px
+			height: 44px
+			margin-left: auto
+			margin-right: auto
+			background: url('../../img/bg/text-price.png') no-repeat center
+	&__list
+		margin-left: -6px
+		margin-right: -6px
+		.col
+			&:nth-of-type(1)
+				 .price
+				 	&__subtitle
+				 		background: #f8ca59
+			&:nth-of-type(2)
+				 .price
+				 	&__subtitle
+				 		background: #9adae9
+			&:nth-of-type(3)
+				 .price
+				 	&__subtitle
+				 		background: #d5d5d6
+			&:nth-of-type(4)
+				 .price
+				 	&__subtitle
+				 		background: #8b8b8b
+
+	&__item
+		margin-left: 6px
+		margin-right: 6px
+		background: white
+		position: relative
+		border-radius: 5px
+		padding-bottom: 20px
+		box-shadow: 10px 21px 18px rgba(0, 0, 0, 0.35)
+
+	&__popular
+		position: absolute
+		top: -19px
+		width: 248px
+		height: 42px
+		line-height: 42px
+		border-radius: 3px
+		text-align: center
+		left: 15px
+		background-color: #e60d46
+		&:before, &:after
+			position: absolute
+			content: ''
+			width: 0
+			height: 0
+			border-style: solid
+			top: 1px 
+		&:before
+			border-width: 0 0 18px 9px
+			border-color: transparent transparent #680010 transparent
+			left: -9px
+		&:after
+			border-width: 18px 0 0 9px
+			border-color: transparent transparent transparent #680010
+			right: -9px
+	&__subtitle
+		font-size: 28px
+		font-weight: 500
+		height: 82px
+		line-height: 82px
+		color: #000000
+		text-align: center
+		border-radius: 3px
+	&__old
+		margin-top: 15px
+		margin-bottom: 10px
+		text-decoration: line-through
+		color: #727272
+		text-align: center
+		font-size: 20px
+		opacity: .82
+		font-weight: 300
+	&__new
+		font-size: 28px
+		color: #060606
+		text-align: center
+		margin-bottom: 35px
+	&__ul
+		color: #595858
+		padding-left: 5px
+		padding-right: 10px
+		&-title
+			color: #0975ad
+			font-weight: 500
+			text-align: center
+			margin-bottom: 17px
+		li
+			position: relative
+			font-weight: 300
+			padding-left: 30px
+			margin-bottom: 7px
+			&:last-of-type
+				margin-bottom: 0
+			&:before
+				position: absolute
+				content: ''
+				display: block
+				@include sprite($check)
+				left: 5px
+				top: 1px
+	&__button
+		width: 443px
+		height: 64px
+		line-height: 64px
+		border-radius: 3px
+		font-size: 25px
+		font-weight: 500
+		color: #000
+		text-align: center
+		margin-top: 95px
+		background: url('../../img/bg/button-blue-3.png') no-repeat center
+		.btn-count
+			color: white
+	&__popup
+		position: absolute
+		right: -78px
+		bottom: 29px
+
+.catalog
+	background: url('../../img/bg/catalog.png') center
+	background-size: cover
+	padding-bottom: 45px
+	position: relative
+	.container
+		position: relative
+	&__title
+		padding-top: 40px
+		padding-bottom: 30px
+	&__item
+		position: relative
+		background: white
+		border-radius: 3px
+		box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.3)
+		margin-right: 9px
+		padding: 78px 7px 24px
+		border-radius: 3px
+		&:hover
+			.catalog__wrap
+				opacity: 1
+		&:last-of-type
+			margin-right: 0
+	&__subtitle
+		position: absolute
+		top: 0
+		left: 34px
+		z-index: 3
+		font-size: 20px
+		font-weight: 500
+		color: #32adac
+		text-align: center
+		padding-top: 5px
+		padding-bottom: 6px
+		width: 210px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 32px
+		border-left: 4px solid #ffe18a
+		border-right: 4px solid #ffe18a
+		border-bottom: 7px solid #ffe18a
+		border-radius: 5px
+		background: white
+		span
+			display: inline-block
+			width: 26px
+			height: 26px
+			border: 1px solid #3eb5b4
+			text-align: center
+			border-radius: 50%
+	&__img
+		margin-bottom: 40px
+		img
+			display: block
+	&__price
+		font-size: 30px
+		font-weight: 500
+		text-align: center
+	&__wrap
+		opacity: 0
+		z-index: 2
+		position: absolute
+		background: rgba(0,0,0,0.8)
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		color: white
+		border-radius: 3px
+		transition: .3s
+		.catalog__title
+			text-align: center
+			margin-top: 105px
+			font-size: 20px
+			font-weight: 500
+			line-height: 30px
+			padding-left: 25px
+			padding-right: 25px
+			&:before
+				display: block
+				content: ''
+				width: 125px
+				height: 17px
+				background: url('../../img/bg/text-lp-yellow.png') center
+				margin-left: auto
+				margin-right: auto
+				margin-bottom: 30px
+	&__button
+		text-align: center
+	&__button-popup
+		display: block
+		margin-top: 50px
+		width: 358px
+		height: 64px
+		line-height: 64px
+		border-radius: 3px
+		background: url('../../img/bg/button-blue-4.png') no-repeat center
+		font-size: 25px
+		font-weight: 500
+		text-align: center
+	&__popup
+		position: absolute
+		bottom: 46px
+		right: -78px
+
+
+.contacts
+	padding-top: 25px
+	padding-bottom: 18px
+	.container
+		position: relative
+	&__title
+		padding-bottom: 32px
+	&__popup
+		position: absolute
+		right: -78px
+		bottom: 0
+	&__data
+		color: #474747
+		line-height: 23px
+		width: 570px
+	&__middle
+		padding-top: 40px
+		p
+			margin-bottom: 13px
+			.icon
+				margin-right: 18px
+	&__phone
+		padding-bottom: 25px
+		margin-left: 22px
+		a
+			font-size: 36px
+	&__button
+		margin-bottom: 55px
+		width: 316px
+		.btn-count
+			right: -30px
+			color: white
+	&__logo
+		margin-left: 60px
+		margin-top: 115px
+
+.footer
+	color: white
+	background: #5d5d5b
+	padding-top: 25px
+	padding-bottom: 18px
+	a
+		color: white
+	&__copy
+		font-size: 13px
+		color: #afaeae
+		margin-right: 115px
+	&__phone
+		.phone
+			color: #d3d3d1
+			font-size: 25px
+		.callback
+			color: #e0ae2f
+			border-color: #e0ae2f
+			font-size: 15px
+			&:hover
+				border-color: transparent
+	&__contacts
+		position: relative
+		font-size: 15px
+		p
+			margin-bottom: 14px
+			.icon
+				margin-right: 14px
+	&__socials
+		a
+			display: inline-block
+			width: 35px
+			height: 35px
+			line-height: 33px
+			border: 1px solid white
+			text-align: center
+			margin-right: 5px
+			border-radius: 50%
+			transition: .3s
+			&:hover
+				transform: scale(1.1)
+		.icon
+
+	&__dev
+		position: absolute
+		right: 31px
+		bottom: 5px
+		img
+			display: block
+.agreement
+	font-size: 15px
+	margin-bottom: 15px
+	text-align: left
+	color: white
+	label
+		cursor: pointer
+		text-align: left
+		color: white
+	input
+		position: relative
+		top: 1px
+		margin-right: 5px
+		color: white
+
+.popup
+	&_window
+		padding: 0
+		border: none
+		.popup
+			&__wrap
+				margin: 0

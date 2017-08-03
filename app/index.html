@@ -28,6 +28,468 @@
 	<![endif]-->
 </head>
 <body>
-
+	<div class="main__popup popup popup_window" id="main-popup">
+		<div class="popup__bg"></div>
+		<div class="popup__wrap">
+			<div class="popup__title">Заявка:</div>
+			<div class="popup__elements">
+				<input type="text" class="popup__input input" placeholder="Имя">
+				<input type="text" class="popup__input input" placeholder="e-mail">
+				<div class="checkbox agreement"><label><input type="checkbox">Подтверждаю согласие на обработку персональных данных</label></div>
+				<button class="popup__button button button_yellow">Отправить заявку</button>
+			</div>
+		</div>
+	</div>
+	<div class="thanks__popup popup popup_window" id="thanks-popup">
+		<div class="popup__bg"></div>
+		<div class="popup__wrap">
+			<div class="popup__title">Заявка:</div>
+			<p>Ваша заявка успешно отправлена!</p>
+			<p class="directOn">Настройка Яндекс-Директ в подарок!</p>
+			<p class="directOff">«Без настройки Яндекс-Директ»</p>
+		</div>
+	</div>
+	<div class="panel">
+		<div class="container row">
+			<div class="panel__logo col"><img src="upload/logo.png" alt=""></div>
+			<div class="panel__share share col">
+				<div class="share__title">Акция!</div>
+				<div class="share__text">Закажите лендинг за 10 минут-настройка Яндекс-Директ в подарок! <span class="countdown"></span></div>
+			</div>
+			<div class="panel__contacts right col">
+				<div class="panel__socials socials">
+					<ul>
+						<li><a href="" target="_blank"><i class="icon icon-fb"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-tw"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-f"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-dribbble"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-pinterest"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-insta"></i></a></li>
+					</ul>
+				</div>
+				<div class="panel__phone">
+					<p><a data-fancybox data-src="#main-popup" href="javascript:;" class="callback">Заказать обратный звонок</a></p>
+					<p><a href="" class="phone">8 (800) 123-45-67</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="header">
+		<div class="container">
+			<nav class="nav">
+				<ul>
+					<li><a href="">Преимущества</a></li>
+					<li><a href="">Услуги</a></li>
+					<li><a href="">Портфолио</a></li>
+					<li><a href="">Цены</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header__title wow bounceInLeft"><span>Лучшее вложение средств</span> - продающий сайт</div>
+			<div class="header__desc wow bounceInRight">Довертись профессионалам!</div>
+			<div class="header__button button button_blue button_popup wow swing animated"><div class="text-zakaz"></div><span class="btn-count btn-count_yellow">1</span></div>
+			<div class="header__button-desc">Мы свяжемся с вами в ближайшее время!</div>
+			<div class="header__popup popup">
+				<div class="popup__bg"></div>
+				<div class="popup__wrap">
+					<div class="popup__title">Заявка:</div>
+					<div class="popup__elements">
+						<input type="text" class="popup__input input" placeholder="Имя">
+						<input type="text" class="popup__input input" placeholder="e-mail">
+						<div class="checkbox agreement"><label><input type="checkbox">Подтверждаю согласие на обработку персональных данных</label></div>
+						<button class="popup__button button button_yellow">Отправить заявку</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="advantages">
+			<div class="container">
+				<div class="advantages__title title">Ключевые преимущества</div>
+				<div class="advantages__list">
+					<div class="row">
+						<div class="col">
+							<div class="advantages__item wow zoomIn">
+								<div class="advantages__icon"><i class="icon icon-thumbup"></i></div>
+								<div class="advantages__text">100% качество на всех <br />этапах разработки </div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="advantages__item wow zoomIn">
+								<div class="advantages__icon"><i class="icon icon-cpm"></i></div>
+								<div class="advantages__text">Конверсия из посетителей <br />в заказы 10-40%</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="advantages__item wow zoomIn">
+								<div class="advantages__icon"><i class="icon icon-dollar"></i></div>
+								<div class="advantages__text">Средняя стоимость <br />разработки <br />25 000 рублей </div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="advantages__item wow zoomIn">
+								<div class="advantages__icon"><i class="icon icon-data"></i></div>
+								<div class="advantages__text">Средний срок разработки <br />лендинга - 14 дней</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="get">
+			<div class="container">
+				<div class="get__title title">Что вы получите?</div>
+				<div class="get__list row">
+					<div class="col wow bounceInLeft">
+						<div class="get__item">
+							<div class="get__subtitle">Бесплатный прототип</div>
+							<div class="get__text">Наши проектировщики сделают высококачественный прототип сайта - вы сможете посмотреть как будет работать ваш сайт еще до этапа разработки!</div>
+							<div class="get__count">01</div>
+						</div>
+					</div>
+					<div class="col wow bounceInLeft">
+						<div class="get__item">
+							<div class="get__subtitle">Домен, хостинг и настройка <br />Метрики</div>
+							<div class="get__text">Осмысленное название домена, хостинг на защищенных серверах, настройка Метрики - все это у нас</div>
+							<div class="get__count">02</div>
+						</div>
+					</div>
+					<div class="col wow bounceInRight">
+						<div class="get__item">
+							<div class="get__subtitle">Уникальный дизайн без <br />всяких шаблонов</div>
+							<div class="get__text">Наши дизайнеры отвергают  все шаблоны - и делают, как им велят сердце и гайдлайны</div>
+							<div class="get__count">03</div>
+						</div>
+					</div>
+					<div class="col wow bounceInRight">
+						<div class="get__item">
+							<div class="get__subtitle">Создание рекламной компании в <br />Яндекс.Директ</div>
+							<div class="get__text">Наши маркетолого создадут для вас компанию и подскажут, что и куда</div>
+							<div class="get__count">04</div>
+						</div>
+					</div>
+					<div class="col wow bounceInLeft">
+						<div class="get__item">
+							<div class="get__subtitle">Качественная адаптивная верстка</div>
+							<div class="get__text">Ваш сайт открывают на компьютере, планшете и телефоне? Наши верстальщики знают,что надо делать</div>
+							<div class="get__count">05</div>
+						</div>
+					</div>
+					<div class="col wow bounceInLeft">
+						<div class="get__item">
+							<div class="get__subtitle">Проведение А/В тестирования</div>
+							<div class="get__text">Сплит тестирование любых элэментов лендинга в профессиональных тест-системах</div>
+							<div class="get__count">06</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="portfolio">
+			<div class="container">
+				<div class="portfolio__title">портфолио</div>
+				<div class="portfolio__list">
+					<div class="portfolio__item wow zoomIn">
+						<div class="portfolio__img"><img src="upload/portfolio/1.png" alt=""></div>
+						<div class="portfolio__wrap">
+							<div class="portfolio__subtitle">Интернет-магазин обуви</div>
+							<a data-fancybox="portfolio" data-src="upload/portfolio/1.png" href="javascript:;" class="portfolio__button button button_transparent">Посмотреть</a>
+						</div>
+					</div>
+					<div class="portfolio__item wow zoomIn">
+						<div class="portfolio__img"><img src="upload/portfolio/2.png" alt=""></div>
+						<div class="portfolio__wrap">
+							<div class="portfolio__subtitle">Интернет-магазин обуви</div>
+							<a data-fancybox="portfolio" data-src="upload/portfolio/2.png" href="javascript:;" class="portfolio__button button button_transparent">Посмотреть</a>
+						</div>
+					</div>
+					<div class="portfolio__item wow zoomIn">
+						<div class="portfolio__img"><img src="upload/portfolio/3.png" alt=""></div>
+						<div class="portfolio__wrap">
+							<div class="portfolio__subtitle">Интернет-магазин обуви</div>
+							<a data-fancybox="portfolio" data-src="upload/portfolio/3.png" href="javascript:;" class="portfolio__button button button_transparent">Посмотреть</a>
+						</div>
+					</div>
+					<div class="portfolio__item wow zoomIn">
+						<div class="portfolio__img"><img src="upload/portfolio/4.png" alt=""></div>
+						<div class="portfolio__wrap">
+							<div class="portfolio__subtitle">Интернет-магазин обуви</div>
+							<a data-fancybox="portfolio" data-src="upload/portfolio/4.png" href="javascript:;" class="portfolio__button button button_transparent">Посмотреть</a>
+						</div>
+					</div>
+					<div class="portfolio__item wow zoomIn">
+						<div class="portfolio__img"><img src="upload/portfolio/5.png" alt=""></div>
+						<div class="portfolio__wrap">
+							<div class="portfolio__subtitle">Интернет-магазин обуви</div>
+							<a data-fancybox="portfolio" data-src="upload/portfolio/5.png" href="javascript:;" class="portfolio__button button button_transparent">Посмотреть</a>
+						</div>
+					</div>
+					<div class="portfolio__item wow zoomIn">
+						<div class="portfolio__img"><img src="upload/portfolio/5.png" alt=""></div>
+						<div class="portfolio__wrap">
+							<div class="portfolio__subtitle">Интернет-магазин обуви</div>
+							<a data-fancybox="portfolio" data-src="upload/portfolio/5.png" href="javascript:;" class="portfolio__button button button_transparent">Посмотреть</a>
+						</div>
+					</div>
+					<div class="portfolio__item wow zoomIn">
+						<div class="portfolio__img"><img src="upload/portfolio/6.png" alt=""></div>
+						<div class="portfolio__wrap">
+							<div class="portfolio__subtitle">Интернет-магазин обуви</div>
+							<a data-fancybox="portfolio" data-src="upload/portfolio/6.png" href="javascript:;" class="portfolio__button button button_transparent">Посмотреть</a>
+						</div>
+					</div>
+					<div class="portfolio__item wow zoomIn">
+						<div class="portfolio__img"><img src="upload/portfolio/7.png" alt=""></div>
+						<div class="portfolio__wrap">
+							<div class="portfolio__subtitle">Интернет-магазин обуви</div>
+							<a data-fancybox="portfolio" data-src="upload/portfolio/7.png" href="javascript:;" class="portfolio__button button button_transparent">Посмотреть</a>
+						</div>
+					</div>
+				</div>
+				<div class="portfolio__button-popup button button_popup wow swing animated">Хочу такой же сайт<span class="btn-count btn-count_yellow">2</span></div>
+				<div class="portfolio__popup popup">
+					<div class="popup__bg"></div>
+					<div class="popup__wrap">
+						<div class="popup__title">Заявка:</div>
+						<div class="popup__elements">
+							<input type="text" class="popup__input input" placeholder="Имя">
+							<input type="text" class="popup__input input" placeholder="e-mail">
+							<div class="checkbox agreement"><label><input type="checkbox">Подтверждаю согласие на обработку персональных данных</label></div>
+							<button class="popup__button button button_yellow">Отправить заявку</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="price">
+			<div class="container">
+				<div class="price__title"><span></span></div>
+				<div class="price__list row">
+					<div class="col col-4 wow slideInLeft">
+						<div class="price__item">
+							<div class="price__subtitle">Старт</div>
+							<div class="price__old">24990 рублей</div>
+							<div class="price__new">9 990 рублей</div>
+							<div class="price__ul">
+								<div class="price__ul-title">Что входит в пакет</div>
+								<div class="price__ul-list">
+									<ul>
+										<li>Бесплатный прототип</li>
+										<li>Уникальный дизайн</li>
+										<li>Верстка</li>
+										<li>Програмная часть</li>
+										<li>Размещение в Интернете на 1 год</li>
+										<li>Создание рекламной кампании в Яндекс.Директ</li>
+										<li>Средние сроки - 10 дней</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col col-4 wow slideInLeft">
+						<div class="price__item">
+							<div class="price__subtitle">Премиум</div>
+							<div class="price__old">29990 рублей</div>
+							<div class="price__new">19 990 рублей</div>
+							<div class="price__ul">
+								<div class="price__ul-title">Что входит в пакет</div>
+								<div class="price__ul-list">
+									<ul>
+										<li>Бесплатный прототип</li>
+										<li>Уникальный дизайн</li>
+										<li>Верстка</li>
+										<li>Програмная часть</li>
+										<li>Размещение в Интернете на 1 год</li>
+										<li>Создание рекламной кампании в Яндекс.Директ</li>
+										<li>Средние сроки - 10 дней</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col col-4 wow slideInRight">	
+						<div class="price__item">
+							<div class="price__popular">Самый популярный</div>
+							<div class="price__subtitle">Бизнес</div>
+							<div class="price__old">34990 рублей</div>
+							<div class="price__new">29 990 рублей</div>
+							<div class="price__ul">
+								<div class="price__ul-title">Что входит в пакет</div>
+								<div class="price__ul-list">
+									<ul>
+										<li>Бесплатный прототип</li>
+										<li>Уникальный дизайн</li>
+										<li>Верстка</li>
+										<li>Програмная часть</li>
+										<li>Размещение в Интернете на 1 год</li>
+										<li>Создание рекламной кампании в Яндекс.Директ</li>
+										<li>Средние сроки - 10 дней</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col col-4 wow slideInRight">
+						<div class="price__item">
+							<div class="price__subtitle">VIP</div>
+							<div class="price__old">64990 рублей</div>
+							<div class="price__new">59 990 рублей</div>
+							<div class="price__ul">
+								<div class="price__ul-title">Что входит в пакет</div>
+								<div class="price__ul-list">
+									<ul>
+										<li>Бесплатный прототип</li>
+										<li>Уникальный дизайн</li>
+										<li>Верстка</li>
+										<li>Програмная часть</li>
+										<li>Размещение в Интернете на 1 год</li>
+										<li>Создание рекламной кампании в Яндекс.Директ</li>
+										<li>Средние сроки - 10 дней</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="price__button button button_popup wow swing animated">Заказать обработку лендинга<span class="btn-count btn-count_yellow">3</span></div>
+				<div class="price__popup popup">
+					<div class="popup__bg"></div>
+					<div class="popup__wrap">
+						<div class="popup__title">Заявка:</div>
+						<div class="popup__elements">
+							<input type="text" class="popup__input input" placeholder="Имя">
+							<input type="text" class="popup__input input" placeholder="e-mail">
+							<input type="text" class="popup__input input" placeholder="Выбор тарифа">
+							<div class="checkbox agreement"><label><input type="checkbox">Подтверждаю согласие на обработку персональных данных</label></div>
+							<button class="popup__button button button_yellow">Отправить заявку</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="catalog">
+			<div class="container">
+				<div class="catalog__title title ">интернет магазин готовых лендингов</div>
+				<div class="catalog__list row">
+					<div class="catalog__item col wow fadeInUp">
+						<div class="catalog__subtitle">Вариант <span>1</span></div>
+						<div class="catalog__img"><img src="upload/catalog/1.png" alt=""></div>
+						<div class="catalog__price">6 990 руб.</div>
+						<div class="catalog__wrap">
+							<div class="catalog__title">Интернет-магазин обуви</div>
+							<div class="catalog__button button button_transparent button_popup">Купить этот лендинг</div>
+						</div>
+					</div>
+					<div class="catalog__item col wow fadeInUp">
+						<div class="catalog__subtitle">Вариант <span>2</span></div>
+						<div class="catalog__img"><img src="upload/catalog/1.png" alt=""></div>
+						<div class="catalog__price">6 990 руб.</div>
+						<div class="catalog__wrap">
+							<div class="catalog__title">Интернет-магазин обуви</div>
+							<div class="catalog__button button button_transparent button_popup">Купить этот лендинг</div>
+						</div>
+					</div>
+					<div class="catalog__item col wow fadeInDown">
+						<div class="catalog__subtitle">Вариант <span>3</span></div>
+						<div class="catalog__img"><img src="upload/catalog/1.png" alt=""></div>
+						<div class="catalog__price">6 990 руб.</div>
+						<div class="catalog__wrap">
+							<div class="catalog__title">Интернет-магазин обуви</div>
+							<div class="catalog__button button button_transparent button_popup">Купить этот лендинг</div>
+						</div>
+					</div>
+					<div class="catalog__item col wow fadeInDown">
+						<div class="catalog__subtitle">Вариант <span>4</span></div>
+						<div class="catalog__img"><img src="upload/catalog/1.png" alt=""></div>
+						<div class="catalog__price">6 990 руб.</div>
+						<div class="catalog__wrap">
+							<div class="catalog__title">Интернет-магазин обуви</div>
+							<div class="catalog__button button button_transparent button_popup">Купить этот лендинг</div>
+						</div>
+					</div>
+				</div>
+				<div class="catalog__button-popup button button_popup wow swing animated">Купить готовый лендинг<span class="btn-count btn-count_white">5</span></div>
+				<div class="catalog__popup popup">
+					<div class="popup__bg"></div>
+					<div class="popup__wrap">
+						<div class="popup__title">Заявка:</div>
+						<div class="popup__elements">
+							<input type="text" class="popup__input input" placeholder="Имя">
+							<input type="text" class="popup__input input" placeholder="e-mail">
+							<div class="checkbox agreement"><label><input type="checkbox">Подтверждаю согласие на обработку персональных данных</label></div>
+							<button class="popup__button button button_yellow">Отправить заявку</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contacts">
+			<div class="container">
+				<div class="contacts__title title">контакты</div>
+				<div class="row wow flipInY">
+					<div class="contacts__data col">
+						<p>Санкт-Петербург, Большая Ягодная, д.67, <br />стр. 9 Бизнес центр «Ягода»</p>
+						<p>+7  (812) 123-45-67 </p>
+						<p>Индивидуальный предприниматель</p>
+						<p><strong>Рапапорт Михаил Алексеевич</strong></p>
+						<p><strong>ИНН:</strong>   123478964565</p>
+						<p><strong>ОГРНИП:</strong>  12304563789456</p>
+						<p><strong>Юридический адрес:</strong>  142000, МО, г. Внуково, мкр. Северный, <br />ул. Утренняя 21Б.</p>
+						<p><strong>Почтовый адрес:</strong>   142000, МО, г. Внуково, мкр. Северный, <br />ул. Утренняя 21Б.</p>
+						<p><strong>Р/счет:</strong>    40802353453280000065</p>
+						<p><strong>Банк:</strong>    МОСКОВСКИЙ РФ АО "АГРОХОЗБАНК" </p>
+						<p><strong>К/счет:</strong>     30101346435746550000430</p>
+						<p><strong>БИК:</strong> 044534653430</p>
+					</div>
+					<div class="contacts__middle col">
+						<div class="contacts__phone"><a href="">8 (800) 123-45-67 </a></div>
+						<div class="contacts__button button button_yellow button_popup wow swing animated">Заказать обратный звонок<span class="btn-count btn-count_blue">4</span></div>
+						<p><i class="icon icon-skype"></i><span>landingskype</span></p>
+						<p><i class="icon icon-gmail"></i><span><a href="landingmail@gmail.com">landingmail@gmail.com</a></span></p>
+					</div>
+					<div class="contacts__logo col"><img src="upload/logo.png" alt=""></div>
+				</div>
+				<div class="contacts__popup popup">
+					<div class="popup__bg"></div>
+					<div class="popup__wrap">
+						<div class="popup__title">Заявка:</div>
+						<div class="popup__elements">
+							<input type="text" class="popup__input input" placeholder="Имя">
+							<input type="text" class="popup__input input" placeholder="e-mail">
+							<div class="checkbox agreement"><label><input type="checkbox">Подтверждаю согласие на обработку персональных данных</label></div>
+							<button class="popup__button button button_yellow">Отправить заявку</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container row">
+			<div class="footer__copy col">© Landing  Super Company 2017</div>
+			<div class="footer__phone col">
+				<p><a href="" class="phone">8 (800) 123-45-67</a></p>
+				<p><a data-fancybox data-src="#main-popup" href="javascript:;" class="callback">Заказать обратный звонок</a></p>
+			</div>
+			<div class="footer__contacts right col">
+				<p><i class="icon icon-marker"></i><span>Санкт-Петербург, Большая Ягодная, д.67 , стр. 9 Бизнес центр «Ягода»</span></p>
+				<p><i class="icon icon-email"></i><span>landingmail@gmail.com</span></p>
+				<div class="footer__socials socials">
+					<ul>
+						<li><a href="" target="_blank"><i class="icon icon-fb"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-tw"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-f"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-dribbble"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-pinterest"></i></a></li>
+						<li><a href="" target="_blank"><i class="icon icon-insta"></i></a></li>
+					</ul>
+				</div>
+				<div class="footer__dev dev"><img src="upload/logo.png" alt=""></div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
