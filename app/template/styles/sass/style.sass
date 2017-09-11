@@ -12,7 +12,7 @@
 
 /* Global settings */
 $font-size: 16px
-$font-family-1: 'Fira Sans', sans-serif
+$font-family-1: 'Tahoma', sans-serif
 $color-1: #000
 
 
@@ -53,12 +53,11 @@ ul
 		list-style-type: none
 
 
-
 a
 	color: $color-1
 	text-decoration: none
 	border-bottom: 1px solid transparent
-	transition: border-bottom .3s
+	transition: border-bottom color .3s
 
 
 .icon
@@ -74,7 +73,7 @@ a
 	padding-left: 15px
 	padding-right: 15px
 
-.row, .clearfix
+.row_float, .clearfix
 	&:before, &:after
 		display: table
 		content: ''
@@ -82,10 +81,18 @@ a
 	&:after
 		clear: both
 
+.row
+	text-align: center
+	font-size: 0
+
 .col
-	float: left
-	display: block
 	min-height: 1px
+	display: inline-block
+	vertical-align: top
+	font-size: $font-size
+	&_float
+		float: left
+		display: block
 	&-1
 		width: (100% / 1)
 	&-2
@@ -98,6 +105,9 @@ a
 		width: (100% / 5)
  
 
+	
+
+
 
 /* Form elements */
 .input
@@ -106,6 +116,8 @@ a
 	font-family: $font-family-1
 	background: white
 	width: 100%
+	&::placeholder
+		color: #878686
 
 .textarea
 	font-size: $font-size
@@ -114,8 +126,8 @@ a
 	background: white
 	resize: none
 	border: 1px solid #f0f0f0
-	&_error
-		border-color: red
+	&::placeholder
+		color: #878686
 
 
 .button
@@ -131,12 +143,6 @@ a
 
 .input, .textarea
 	transition: border-color .3s
-
-a
-	transition: .3s
-
-::placeholder
-	color: #878686
 
 
 
