@@ -57,7 +57,7 @@ a
 	color: $color-1
 	text-decoration: none
 	border-bottom: 1px solid transparent
-	transition: border-bottom color .3s
+	transition: .3s
 
 
 .icon
@@ -69,11 +69,12 @@ a
 
 /* Grid */
 .container
+	position: relative
 	width: (1140px + 30px)
 	padding-left: 15px
 	padding-right: 15px
 
-.row_float, .clearfix
+.row, .clearfix
 	&:before, &:after
 		display: table
 		content: ''
@@ -81,18 +82,19 @@ a
 	&:after
 		clear: both
 
-.row
+.row_inline
 	text-align: center
 	font-size: 0
 
 .col
 	min-height: 1px
-	display: inline-block
-	vertical-align: top
-	font-size: $font-size
-	&_float
-		float: left
-		display: block
+	float: left
+	display: block
+	&_line
+		display: inline-block
+		vertical-align: top
+		font-size: $font-size
+		min-height: 1px
 	&-1
 		width: (100% / 1)
 	&-2
