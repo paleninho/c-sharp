@@ -44,11 +44,14 @@ a {
   -webkit-transition: .3s;
   transition: .3s; }
 
+img {
+  display: block; }
+
 .icon {
   display: inline-block;
   vertical-align: middle; }
 
-.input, .button, .slick-slide {
+.input, .button, .slick-slide, .textarea {
   outline: none; }
 
 /* Grid */
@@ -67,7 +70,7 @@ a {
 .row:after, .clearfix:after {
   clear: both; }
 
-.row_inline {
+.row_line {
   text-align: center;
   font-size: 0; }
 
