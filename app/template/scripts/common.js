@@ -1,7 +1,6 @@
 $(document).ready(function($) {
 
 	/* Phone mask */
-	$('.input_phone').mask('+7 (999) 999-99-99');
-	
+	$('.input.input_phone input').mask('+7 (999) 999-99-99');
 	
 });

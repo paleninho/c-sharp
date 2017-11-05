@@ -10,9 +10,9 @@ var gulp       = require('gulp'),
 	pngquant     = require('imagemin-pngquant'), 
 	cache        = require('gulp-cache'), 
 	autoprefixer = require('gulp-autoprefixer'),
-	spritesmith = require('gulp.spritesmith'),
-	rsync = require('gulp-rsync'),
-	zip = require('gulp-zip');
+	spritesmith  = require('gulp.spritesmith'),
+	rsync        = require('gulp-rsync'),
+	zip          = require('gulp-zip');
 
 
 gulp.task('sprite', function () {
@@ -63,7 +63,7 @@ gulp.task('css-libs', ['sass'], function() {
 		.pipe(cssnano()) 
 		.pipe(rename({suffix: '.min'})) 
 		.pipe(gulp.dest('app/template/styles/css')); 
-});
+	});
 
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts', 'scriptsMin'], function() {
 	gulp.watch('app/template/styles/sass/**/*.sass', ['sass']); 
@@ -92,7 +92,7 @@ gulp.task('ftp', function() {
 		.pipe(rsync({
 			root: 'app/',
 			hostname: 'e5ashb4k_io@e5ashb4k.beget.tech',
-			destination: 'fl/layout/',
+			destination: 'fl/layout/site-',
 			archive: true,
 			silent: false,
 			compress: true
