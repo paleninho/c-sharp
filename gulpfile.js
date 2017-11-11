@@ -91,8 +91,8 @@ gulp.task('ftp', function() {
 	return gulp.src('src/**')
 		.pipe(rsync({
 			root: 'src/',
-			hostname: 'e5ashb4k_io@e5ashb4k.beget.tech',
-			destination: 'fl/layout/site-',
+			hostname: 'e5ashb4k_fl@e5ashb4k.beget.tech',
+			destination: 'layout/site-name/',
 			archive: true,
 			silent: false,
 			compress: true
