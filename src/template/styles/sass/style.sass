@@ -1,13 +1,6 @@
 /* Including styles files */
 @import sprite.sass
-
-
-/* Including fonts */
-@font-face
-	src: url('../../fonts/')
-	font-family: 
-	font-weight: 
-
+@import fonts.sass
 
 
 /* Global settings */
@@ -41,6 +34,7 @@ header, nav, main, section, article, aside, footer, li, .block
 
 
 h1, h2, h3, h4, h5, h6
+	display: inline
 	font-size: inherit
 	font-weight: inherit
 
@@ -67,7 +61,7 @@ img
 	display: inline-block
 	vertical-align: middle
 
-.input, .button, .slick-slide, .textarea
+.text, .button, .slick-slide, .area
 	outline: none
 
 /* Grid */
@@ -115,7 +109,7 @@ img
 
 
 /* Form elements */
-.input
+.text
 	display: block
 	font-size: $font-size
 	font-family: $font-family-1
@@ -124,7 +118,7 @@ img
 	&::placeholder
 		color: #878686
 
-.textarea
+.area
 	font-size: $font-size
 	font-family: $font-family-1
 	display: block
@@ -146,13 +140,13 @@ img
 	text-align: center
 	transition: .3s
 
-.input, .textarea
+.text, .area
 	transition: border-color .3s
 
 
 
 
-/* Blocks align */ 
+/* Blocks */ 
 .left
 	float: left
 
