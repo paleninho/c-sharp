@@ -61,11 +61,11 @@ img
 	display: inline-block
 	vertical-align: middle
 
-.text, .btn, .slick-slide, .area
+.input input, .btn, .slick-slide, .textarea textarea
 	outline: none
 
 /* Grid */
-.container
+.case
 	position: relative
 	width: (1140px + 30px)
 	padding-left: 15px
@@ -98,24 +98,27 @@ img
 
 
 /* Form elements */
-.text
-	display: block
-	font-size: $font-size
-	font-family: $font-family-1
-	background: white
-	width: 100%
-	&::placeholder
-		color: #878686
+.input
+	input
+		display: block
+		font-size: $font-size
+		font-family: $font-family-1
+		background: white
+		width: 100%
+		&::placeholder
+			color: #878686
 
-.area
-	font-size: $font-size
-	font-family: $font-family-1
-	display: block
-	background: white
-	resize: none
-	border: 1px solid #f0f0f0
-	&::placeholder
-		color: #878686
+.textarea
+	textarea
+		font-size: $font-size
+		font-family: $font-family-1
+		display: block
+		background: white
+		resize: none
+		border: 1px solid #f0f0f0
+		width: 100%
+		&::placeholder
+			color: #878686
 
 
 .btn
@@ -129,8 +132,8 @@ img
 	text-align: center
 	transition: .3s
 
-.text, .area
-	transition: border-color .3s
+.input input, .textarea textarea
+	transition: .3s
 
 
 
@@ -142,6 +145,6 @@ img
 .right
 	float: right
 
-.mid, .container
+.mid, .case
 	margin-left: auto
 	margin-right: auto
