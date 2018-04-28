@@ -1,6 +1,7 @@
 /* Including styles files */
 @import sprite.sass
 @import fonts.sass
+@import grid.sass
 
 
 
@@ -25,26 +26,20 @@ body
 header, nav, main, section, article, aside, footer, li, .block
 	display: block
 
-.inline-block
-	display: inline-block
-
 .hidden
 	display: none
-
-
 
 h1, h2, h3, h4, h5, h6
 	display: inline
 	font-size: inherit
 	font-weight: inherit
 
-
 ul
-	font-size: 0
-	li
-		display: inline-block
-		font-size: $font-size
-		list-style-type: none
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+
+
 
 
 a
@@ -55,47 +50,13 @@ a
 
 img
 	display: block
+	max-width: 100% !important
+	max-height: 100% !important
 
 
 .icon
 	display: inline-block
 	vertical-align: middle
-
-.input input, .btn, .slick-slide, .textarea textarea
-	outline: none
-
-/* Grid */
-.case
-	position: relative
-	width: (1140px + 30px)
-	padding-left: 15px
-	padding-right: 15px
-
-.row, .clearfix
-	&:before, &:after
-		display: table
-		content: ''
-		box-sizing: border-box
-	&:after
-		clear: both
-
-.row_line
-	text-align: center
-	font-size: 0
-
-.col
-	min-height: 1px
-	float: left
-	display: block
-	&_line
-		display: inline-block
-		vertical-align: top
-		font-size: $font-size
-		min-height: 1px
-
-	
-
-
 
 /* Form elements */
 .input
@@ -120,7 +81,6 @@ img
 		&::placeholder
 			color: #878686
 
-
 .btn
 	position: relative
 	display: block
@@ -135,16 +95,6 @@ img
 .input input, .textarea textarea
 	transition: .3s
 
+.input input, .btn, .slick-slide, .textarea textarea
+	outline: none !important
 
-
-
-/* Blocks */ 
-.left
-	float: left
-
-.right
-	float: right
-
-.mid, .case
-	margin-left: auto
-	margin-right: auto

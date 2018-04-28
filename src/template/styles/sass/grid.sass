@@ -1,0 +1,65 @@
+/* Grid */
+.case
+  position: relative
+  width: (1140px + 30px)
+  height: 400px
+  padding-left: 15px
+  padding-right: 15px
+  margin: 0 auto
+
+.col, .row
+  display: flex
+  flex-wrap: wrap
+
+.row
+  flex-direction: row
+  &-r
+    flex-direction: row-reverse
+.col
+  flex-direction: column
+  &-r
+    flex-direction: column-reverse
+
+.row, .col
+  &.left
+    justify-content: flex-start
+
+  &.right
+    justify-content: flex-end
+
+  &.mid
+    justify-content: center
+
+  &.between
+    justify-content: space-between
+
+  &.around
+    justify-content: space-around
+
+
+.i
+  &-left
+    align-items: flex-start
+  &-right
+    align-items: flex-end
+  &-mid
+    align-items: center
+  &-baseline
+    align-items: baseline
+  &-strech
+    align-items: stretch
+
+.one
+  order: 1
+.two
+  order: 2
+.tree
+  order: 3
+.four
+  order: 4
+.five
+  order: 5
+.six
+  order: 6
+.seven
+  order: 7

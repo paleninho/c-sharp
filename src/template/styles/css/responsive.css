@@ -1,11 +1,11 @@
 @media screen and (max-width: 1199px) {
-  .container {
+  .case {
     width: 950px; } }
 
 @media screen and (max-width: 970px) {
-  .container {
+  .case {
     width: 750px; } }
 
 @media screen and (max-width: 767px) {
-  .container {
+  .case {
     width: 100%; } }
