@@ -60,15 +60,39 @@ img
 
 /* Form elements */
 .input
-	input
+	position: relative
+	overflow: hidden
+	&__wrap
 		display: block
 		font-size: $font-size
 		font-family: $font-family-1
 		background: white
 		width: 100%
-		&::placeholder
-			opacity: 1
-			color: #878686
+		&:focus
+			+ .input
+				&__title
+					&_hide
+						opacity: 0
+				&__title
+					&_fade
+						transform: translateX(-100%)
+				&__title
+					&_none
+						display: none
+
+	&__title
+		transition: .5s
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	&_default
+		.input
+			&__wrap
+				border: 1px solid gray
+				
+
 
 .textarea
 	textarea

@@ -7,7 +7,6 @@
 .case {
   position: relative;
   width: 1170px;
-  height: 400px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto; }
@@ -76,13 +75,13 @@
       -ms-flex-pack: distribute;
           justify-content: space-around; }
 
-.i-left {
+.i-top {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start; }
 
-.i-right {
+.i-bottom {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
@@ -203,20 +202,33 @@ img {
   vertical-align: middle; }
 
 /* Form elements */
-.input input {
-  display: block;
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
-  background: white;
-  width: 100%; }
-  .input input::-webkit-input-placeholder {
-    color: #878686; }
-  .input input::-moz-placeholder {
-    color: #878686; }
-  .input input:-ms-input-placeholder {
-    color: #878686; }
-  .input input::placeholder {
-    color: #878686; }
+.input {
+  position: relative;
+  overflow: hidden; }
+  .input__wrap {
+    display: block;
+    font-size: 16px;
+    font-family: "Tahoma", sans-serif;
+    background: white;
+    width: 100%; }
+    .input__wrap:focus + .input__title_hide {
+      opacity: 0; }
+    .input__wrap:focus + .input__title_fade {
+      -webkit-transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
+              transform: translateX(-100%); }
+    .input__wrap:focus + .input__title_none {
+      display: none; }
+  .input__title {
+    -webkit-transition: .5s;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .input_default .input__wrap {
+    border: 1px solid gray; }
 
 .textarea textarea {
   font-size: 16px;
@@ -227,12 +239,16 @@ img {
   border: 1px solid #f0f0f0;
   width: 100%; }
   .textarea textarea::-webkit-input-placeholder {
+    opacity: 1;
     color: #878686; }
   .textarea textarea::-moz-placeholder {
+    opacity: 1;
     color: #878686; }
   .textarea textarea:-ms-input-placeholder {
+    opacity: 1;
     color: #878686; }
   .textarea textarea::placeholder {
+    opacity: 1;
     color: #878686; }
 
 .btn {

@@ -43,7 +43,7 @@ gulp.task('browser-sync', function() {
 gulp.task('scripts', function() {
 	return gulp.src([ 
 		'src/template/libs/jquery/dist/jquery.js',
-		'src/template/libs/jquery.maskedinput/dist/jquery.maskedinput.min.js'
+		'src/template/libs/jquery-mask-plugin/dist/jquery.mask.js'
 		])
 		.pipe(concat('libs.js')) 
 		.pipe(gulp.dest('src/template/scripts')); 
