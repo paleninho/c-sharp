@@ -205,30 +205,12 @@ img {
 .input {
   position: relative;
   overflow: hidden; }
-  .input__wrap {
+  .input input {
     display: block;
     font-size: 16px;
     font-family: "Tahoma", sans-serif;
     background: white;
     width: 100%; }
-    .input__wrap:focus + .input__title_hide {
-      opacity: 0; }
-    .input__wrap:focus + .input__title_fade {
-      -webkit-transform: translateX(-100%);
-          -ms-transform: translateX(-100%);
-              transform: translateX(-100%); }
-    .input__wrap:focus + .input__title_none {
-      display: none; }
-  .input__title {
-    -webkit-transition: .5s;
-    transition: .5s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-  .input_default .input__wrap {
-    border: 1px solid gray; }
 
 .textarea textarea {
   font-size: 16px;
@@ -236,7 +218,6 @@ img {
   display: block;
   background: white;
   resize: none;
-  border: 1px solid #f0f0f0;
   width: 100%; }
   .textarea textarea::-webkit-input-placeholder {
     opacity: 1;
