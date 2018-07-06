@@ -148,7 +148,7 @@
           order: 7; }
 
 /* Global settings */
-* {
+*, :before, :after {
   padding: 0;
   margin: 0;
   border: 0;
@@ -163,9 +163,6 @@ body {
 
 header, nav, main, section, article, aside, footer, li, .block {
   display: block; }
-
-.hidden {
-  display: none; }
 
 h1, h2, h3, h4, h5, h6 {
   display: inline;
@@ -250,3 +247,19 @@ img {
 
 .input input, .btn, .slick-slide, .textarea textarea {
   outline: none !important; }
+
+.tal {
+  text-align: left; }
+
+.tac {
+  text-align: center; }
+
+.tar {
+  text-align: right; }
+
+.mid {
+  margin-left: auto;
+  margin-right: auto; }
+
+.hidden-lg {
+  display: none; }
