@@ -1,12 +1,12 @@
 /* Grid */
 .case
   position: relative
-  width: (1140px + 30px)
+  width: (1170px + 30px)
   padding-left: 15px
   padding-right: 15px
   margin: 0 auto
 
-.col, .row
+.row
   display: flex
   flex-wrap: wrap
 
@@ -14,10 +14,21 @@
   flex-direction: row
   &-r
     flex-direction: row-reverse
+  &-
+    margin-left: -14px
+    margin-right: -14px
+
+  &-small
+    margin-left: -9px
+    margin-right: -9px
+    
 .col
-  flex-direction: column
-  &-r
-    flex-direction: column-reverse
+  padding-left: 14px
+  padding-right: 14px
+
+.col-small
+  padding-left: 9px
+  padding-right: 9px
 
 .row, .col
   &.left
@@ -35,6 +46,8 @@
   &.around
     justify-content: space-around
 
+.no-wrap
+  flex-wrap: nowrap
 
 .i
   &-top
@@ -62,3 +75,40 @@
   order: 6
 .seven
   order: 7
+
+@mixin grid($gridCols, $beforeCountText)
+  $i: 1
+  @while $i < $gridCols + 1
+    .col-#{$beforeCountText}-#{$i}
+      width: 100% / $gridCols * $i
+      $i: $i + 1
+
+@mixin gridMargin($gridCols, $beforeCountText)
+  $i: 1
+  @while $i < $gridCols + 1
+    .col-#{$beforeCountText}-ml-#{$i}
+      margin-left: 100% / $gridCols * $i
+      $i: $i + 1
+
+@media screen and (min-width: 1200px)
+  @include grid(12, "lg")
+  @include gridMargin(12, "lg")
+  .col-lg-12.row-
+    width: auto
+
+@media screen and (max-width: 1199px)
+  .case
+    width: 950px
+  @include grid(12, "md")
+
+
+@media screen and (max-width: 992px)
+  .case
+    width: 750px
+  @include grid(12, "sm")
+
+
+@media screen and (max-width: 767px)
+  .case
+    width: 100%
+  @include grid(12, "xs")

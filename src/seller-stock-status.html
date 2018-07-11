@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+
+<main class="main">
+	<div class="page page_bg">
+		<div class="case">
+			<div class="page__wrap">
+				<div class="page__title main-title main-title_mb">Текущее состояние склада отданного на комиссию</div>
+					<div class="products">
+						<div class="products__head row">
+							<div class="products__item products__item_checkbox"></div>
+							<div class="products__item products__item_ordered"><strong>заказано</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+							<div class="products__item products__item_name"><strong>Наименование</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+							<div class="products__item products__item_desc"><strong>описание</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+							<div class="products__item products__item_quantity"><strong>Кол-во</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+							<div class="products__item products__item_status-order"><strong>Статус</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+							<div class="products__item products__item_price"><strong>Цена <br>продажи</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+							<div class="products__item products__item_total"><strong>Сумма <br>продажи</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+							<div class="products__item products__item_commission"><strong>Сумма комиссионного<br>вознаграждения</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+							<div class="products__item products__item_btns"><strong>Статус заказа</strong><div class="control"><div class="control__item control__item_up"></div><div class="control__item control__item_down"></div></div></div>
+						</div>
+						<div class="filter-line block block_filter">
+							<div class="filter-line__wrap row row-small between i-mid no-wrap">
+								<div class="col-small">
+									<div class="filter-line_checkbox checkbox checkbox_check-only">
+										<input type="checkbox" class="checkbox__wrap">
+										<label class="checkbox__title"></label>
+									</div>
+								</div>
+								<div class="filter-line__select select select_default col-small">
+									<select class="select__wrap" name="">
+										<option value="">Все</option>
+										<option value="">Название 1</option>
+										<option value="">Название 2</option>
+										<option value="">Название 3</option>
+									</select>
+								</div>
+								<div class="filter-line__btns col-small">
+									<button class="filter-line__btn btn btn_bg-yellow btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="18" viewBox="0 0 21 18"><defs><path id="vipga" d="M1999 593v-19h22v19zm5.7-10.15l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"></path><path id="vipgb" d="M2015 579v14c0 .41-.12 1-1 1h-14c-.41 0-1-.59-1-1v-14c0-.41.15-1.06 1-1h14a1 1 0 0 1 1 1zm-2 2c0-.2-.08-.97-1-1h-10c-.2 0-1 .17-1 1v10c-.03.8.8 1 1 1h10c.2 0 .97-.33 1-1z"></path><path id="vipgc" d="M2004.7 582.85l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"></path><clipPath id="vipgd"><use fill="#fff" xlink:href="#vipga"></use></clipPath></defs><g><g transform="translate(-1999 -576)"><use xlink:href="#vipgb"></use></g><g transform="translate(-1999 -576)"><use xlink:href="#vipgc"></use><use fill="#fff" fill-opacity="0" stroke="#f1c400" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#vipgd&quot;)" xlink:href="#vipgc"></use></g></g></svg><span>Подтвердить</span></button>
+									<button class="filter-line__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><defs><path id="30ypa" d="M2173.5 577a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17z"></path><path id="30ypc" d="M2167.3 580.7l1.4-1.4 11 11-1.4 1.4z"></path><clipPath id="30ypb"><use fill="#fff" xlink:href="#30ypa"></use></clipPath></defs><g><g transform="translate(-2165 -577)"><use fill="#fff" fill-opacity="0" stroke="#000" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#30ypb&quot;)" xlink:href="#30ypa"></use></g><g transform="translate(-2165 -577)"><use xlink:href="#30ypc"></use></g></g></svg><span>Отменить</span></button>
+								</div>
+							</div>
+						</div>
+						<div class="products__body">
+							<div class="products__line block block_products row">
+								<div class="products__item products__item_checkbox">
+									<div class="products__checkbox checkbox checkbox_check-only">
+										<input type="checkbox" class="checkbox__wrap">
+										<label class="checkbox__title"></label>
+									</div>
+								</div>
+								<div class="products__item products__item_ordered">04 апр <br>14:20</div>
+								<div class="products__item products__item_name">
+									<div class="products__product row between">
+										<div class="products__product-img"><img src="upload/product-small.png" alt=""></div>
+										<div class="products__product-text">Диск тормозной задний AUDI Q7 (4L), VW TOUAREG (7L_, 7P5) DF4487S - Упаковка повреждена</div>
+									</div>
+								</div>
+								<div class="products__item products__item_desc">Фильтр масляны</div>
+								<div class="products__item products__item_quantity">2 шт.</div>
+								<div class="products__item products__item_status-order">Выдан</div>
+								<div class="products__item products__item_price">100 руб.</div>
+								<div class="products__item products__item_total">200 руб.</div>
+								<div class="products__item products__item_commission">20 руб.</div>
+								<div class="products__item products__item_btns">
+									<a href="" class="products__btn btn btn_bg-yellow btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="18" viewBox="0 0 21 18"><defs><path id="vipga" d="M1999 593v-19h22v19zm5.7-10.15l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"/><path id="vipgb" d="M2015 579v14c0 .41-.12 1-1 1h-14c-.41 0-1-.59-1-1v-14c0-.41.15-1.06 1-1h14a1 1 0 0 1 1 1zm-2 2c0-.2-.08-.97-1-1h-10c-.2 0-1 .17-1 1v10c-.03.8.8 1 1 1h10c.2 0 .97-.33 1-1z"/><path id="vipgc" d="M2004.7 582.85l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"/><clipPath id="vipgd"><use fill="#fff" xlink:href="#vipga"/></clipPath></defs><g><g transform="translate(-1999 -576)"><use xlink:href="#vipgb"/></g><g transform="translate(-1999 -576)"><use xlink:href="#vipgc"/><use fill="#fff" fill-opacity="0" stroke="#f1c400" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#vipgd&quot;)" xlink:href="#vipgc"/></g></g></svg><span>Подтвердить</span></a>
+									<a href="" class="products__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><defs><path id="30ypa" d="M2173.5 577a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17z"/><path id="30ypc" d="M2167.3 580.7l1.4-1.4 11 11-1.4 1.4z"/><clipPath id="30ypb"><use fill="#fff" xlink:href="#30ypa"/></clipPath></defs><g><g transform="translate(-2165 -577)"><use fill="#fff" fill-opacity="0" stroke="#000" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#30ypb&quot;)" xlink:href="#30ypa"/></g><g transform="translate(-2165 -577)"><use xlink:href="#30ypc"/></g></g></svg><span>Отменить</span></a>
+									<a href="" class="products__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 20 15"><defs><path id="p2xsa" d="M2328 578v15h-20v-15zm-3 2h-14l7 6.06zm-15 2v8l5-4zm2 9h12l-4-4-2 1-2-1zm14-1v-8l-5 4z"/></defs><g><g transform="translate(-2308 -578)"><use xlink:href="#p2xsa"/></g></g></svg><span>Связаться</span></a>
+								</div>
+							</div>
+							<div class="products__line block block_products row">
+								<div class="products__item products__item_checkbox">
+									<div class="products__checkbox checkbox checkbox_check-only">
+										<input type="checkbox" class="checkbox__wrap">
+										<label class="checkbox__title"></label>
+									</div>
+								</div>
+								<div class="products__item products__item_ordered">04 апр <br>14:20</div>
+								<div class="products__item products__item_name">
+									<div class="products__product row between">
+										<div class="products__product-img"><img src="upload/product-small.png" alt=""></div>
+										<div class="products__product-text">Диск тормозной задний AUDI Q7 (4L), VW TOUAREG (7L_, 7P5) DF4487S - Упаковка повреждена</div>
+									</div>
+								</div>
+								<div class="products__item products__item_desc">Фильтр масляны</div>
+								<div class="products__item products__item_quantity">2 шт.</div>
+								<div class="products__item products__item_status-order">Выдан</div>
+								<div class="products__item products__item_price">100 руб.</div>
+								<div class="products__item products__item_total">200 руб.</div>
+								<div class="products__item products__item_commission">20 руб.</div>
+								<div class="products__item products__item_btns">
+									<a href="" class="products__btn btn btn_bg-yellow btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="18" viewBox="0 0 21 18"><defs><path id="vipga" d="M1999 593v-19h22v19zm5.7-10.15l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"/><path id="vipgb" d="M2015 579v14c0 .41-.12 1-1 1h-14c-.41 0-1-.59-1-1v-14c0-.41.15-1.06 1-1h14a1 1 0 0 1 1 1zm-2 2c0-.2-.08-.97-1-1h-10c-.2 0-1 .17-1 1v10c-.03.8.8 1 1 1h10c.2 0 .97-.33 1-1z"/><path id="vipgc" d="M2004.7 582.85l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"/><clipPath id="vipgd"><use fill="#fff" xlink:href="#vipga"/></clipPath></defs><g><g transform="translate(-1999 -576)"><use xlink:href="#vipgb"/></g><g transform="translate(-1999 -576)"><use xlink:href="#vipgc"/><use fill="#fff" fill-opacity="0" stroke="#f1c400" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#vipgd&quot;)" xlink:href="#vipgc"/></g></g></svg><span>Подтвердить</span></a>
+									<a href="" class="products__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><defs><path id="30ypa" d="M2173.5 577a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17z"/><path id="30ypc" d="M2167.3 580.7l1.4-1.4 11 11-1.4 1.4z"/><clipPath id="30ypb"><use fill="#fff" xlink:href="#30ypa"/></clipPath></defs><g><g transform="translate(-2165 -577)"><use fill="#fff" fill-opacity="0" stroke="#000" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#30ypb&quot;)" xlink:href="#30ypa"/></g><g transform="translate(-2165 -577)"><use xlink:href="#30ypc"/></g></g></svg><span>Отменить</span></a>
+									<a href="" class="products__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 20 15"><defs><path id="p2xsa" d="M2328 578v15h-20v-15zm-3 2h-14l7 6.06zm-15 2v8l5-4zm2 9h12l-4-4-2 1-2-1zm14-1v-8l-5 4z"/></defs><g><g transform="translate(-2308 -578)"><use xlink:href="#p2xsa"/></g></g></svg><span>Связаться</span></a>
+								</div>
+							</div>
+							<div class="products__line block block_products row">
+								<div class="products__item products__item_checkbox">
+									<div class="products__checkbox checkbox checkbox_check-only">
+										<input type="checkbox" class="checkbox__wrap">
+										<label class="checkbox__title"></label>
+									</div>
+								</div>
+								<div class="products__item products__item_ordered">04 апр <br>14:20</div>
+								<div class="products__item products__item_name">
+									<div class="products__product row between">
+										<div class="products__product-img"><img src="upload/product-small.png" alt=""></div>
+										<div class="products__product-text">Диск тормозной задний AUDI Q7 (4L), VW TOUAREG (7L_, 7P5) DF4487S - Упаковка повреждена</div>
+									</div>
+								</div>
+								<div class="products__item products__item_desc">Фильтр масляны</div>
+								<div class="products__item products__item_quantity">2 шт.</div>
+								<div class="products__item products__item_status-order">Выдан</div>
+								<div class="products__item products__item_price">100 руб.</div>
+								<div class="products__item products__item_total">200 руб.</div>
+								<div class="products__item products__item_commission">20 руб.</div>
+								<div class="products__item products__item_btns">
+									<a href="" class="products__btn btn btn_bg-yellow btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="18" viewBox="0 0 21 18"><defs><path id="vipga" d="M1999 593v-19h22v19zm5.7-10.15l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"/><path id="vipgb" d="M2015 579v14c0 .41-.12 1-1 1h-14c-.41 0-1-.59-1-1v-14c0-.41.15-1.06 1-1h14a1 1 0 0 1 1 1zm-2 2c0-.2-.08-.97-1-1h-10c-.2 0-1 .17-1 1v10c-.03.8.8 1 1 1h10c.2 0 .97-.33 1-1z"/><path id="vipgc" d="M2004.7 582.85l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"/><clipPath id="vipgd"><use fill="#fff" xlink:href="#vipga"/></clipPath></defs><g><g transform="translate(-1999 -576)"><use xlink:href="#vipgb"/></g><g transform="translate(-1999 -576)"><use xlink:href="#vipgc"/><use fill="#fff" fill-opacity="0" stroke="#f1c400" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#vipgd&quot;)" xlink:href="#vipgc"/></g></g></svg><span>Подтвердить</span></a>
+									<a href="" class="products__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><defs><path id="30ypa" d="M2173.5 577a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17z"/><path id="30ypc" d="M2167.3 580.7l1.4-1.4 11 11-1.4 1.4z"/><clipPath id="30ypb"><use fill="#fff" xlink:href="#30ypa"/></clipPath></defs><g><g transform="translate(-2165 -577)"><use fill="#fff" fill-opacity="0" stroke="#000" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#30ypb&quot;)" xlink:href="#30ypa"/></g><g transform="translate(-2165 -577)"><use xlink:href="#30ypc"/></g></g></svg><span>Отменить</span></a>
+									<a href="" class="products__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 20 15"><defs><path id="p2xsa" d="M2328 578v15h-20v-15zm-3 2h-14l7 6.06zm-15 2v8l5-4zm2 9h12l-4-4-2 1-2-1zm14-1v-8l-5 4z"/></defs><g><g transform="translate(-2308 -578)"><use xlink:href="#p2xsa"/></g></g></svg><span>Связаться</span></a>
+								</div>
+							</div>
+							<div class="products__line block block_products row">
+								<div class="products__item products__item_checkbox">
+									<div class="products__checkbox checkbox checkbox_check-only">
+										<input type="checkbox" class="checkbox__wrap">
+										<label class="checkbox__title"></label>
+									</div>
+								</div>
+								<div class="products__item products__item_ordered">04 апр <br>14:20</div>
+								<div class="products__item products__item_name">
+									<div class="products__product row between">
+										<div class="products__product-img"><img src="upload/product-small.png" alt=""></div>
+										<div class="products__product-text">Диск тормозной задний AUDI Q7 (4L), VW TOUAREG (7L_, 7P5) DF4487S - Упаковка повреждена</div>
+									</div>
+								</div>
+								<div class="products__item products__item_desc">Фильтр масляны</div>
+								<div class="products__item products__item_quantity">2 шт.</div>
+								<div class="products__item products__item_status-order">Выдан</div>
+								<div class="products__item products__item_price">100 руб.</div>
+								<div class="products__item products__item_total">200 руб.</div>
+								<div class="products__item products__item_commission">20 руб.</div>
+								<div class="products__item products__item_btns">
+									<a href="" class="products__btn btn btn_bg-yellow btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="18" viewBox="0 0 21 18"><defs><path id="vipga" d="M1999 593v-19h22v19zm5.7-10.15l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"/><path id="vipgb" d="M2015 579v14c0 .41-.12 1-1 1h-14c-.41 0-1-.59-1-1v-14c0-.41.15-1.06 1-1h14a1 1 0 0 1 1 1zm-2 2c0-.2-.08-.97-1-1h-10c-.2 0-1 .17-1 1v10c-.03.8.8 1 1 1h10c.2 0 .97-.33 1-1z"/><path id="vipgc" d="M2004.7 582.85l-2.12 2.12 4.95 4.95 9.9-9.9-2.13-2.12-7.77 7.78z"/><clipPath id="vipgd"><use fill="#fff" xlink:href="#vipga"/></clipPath></defs><g><g transform="translate(-1999 -576)"><use xlink:href="#vipgb"/></g><g transform="translate(-1999 -576)"><use xlink:href="#vipgc"/><use fill="#fff" fill-opacity="0" stroke="#f1c400" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#vipgd&quot;)" xlink:href="#vipgc"/></g></g></svg><span>Подтвердить</span></a>
+									<a href="" class="products__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><defs><path id="30ypa" d="M2173.5 577a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17z"/><path id="30ypc" d="M2167.3 580.7l1.4-1.4 11 11-1.4 1.4z"/><clipPath id="30ypb"><use fill="#fff" xlink:href="#30ypa"/></clipPath></defs><g><g transform="translate(-2165 -577)"><use fill="#fff" fill-opacity="0" stroke="#000" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#30ypb&quot;)" xlink:href="#30ypa"/></g><g transform="translate(-2165 -577)"><use xlink:href="#30ypc"/></g></g></svg><span>Отменить</span></a>
+									<a href="" class="products__btn btn btn_bg-gray btn_small btn_shadow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 20 15"><defs><path id="p2xsa" d="M2328 578v15h-20v-15zm-3 2h-14l7 6.06zm-15 2v8l5-4zm2 9h12l-4-4-2 1-2-1zm14-1v-8l-5 4z"/></defs><g><g transform="translate(-2308 -578)"><use xlink:href="#p2xsa"/></g></g></svg><span>Связаться</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+</body>
+</html>
