@@ -47,6 +47,7 @@ $(document).ready(function($) {
 	valueElementForm('multi-select__item');
 	valueElementForm('opening__item');
 	valueElementForm('upload-photos__item');
+	valueElementForm('file');
 	
 	$('.select__wrap').styler();
 
@@ -173,5 +174,8 @@ $(document).ready(function($) {
 	var colLeftHeigth = $('#col-left').height(),
 			colRight = $('#col-right .page__block');
 
-	colRight.css('min-height', colLeftHeigth)
+	colRight.css('min-height', colLeftHeigth);
+
+
+	$('.main-slide__tabs').tabs();
 });
