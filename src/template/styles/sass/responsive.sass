@@ -1,35 +1,1061 @@
-@media screen and (max-width: 1199px)
+@media screen and (max-width: 1219px)
 	.case
 		width: 950px
-
-
+	
+	.hidden-lg
+		display: block		
 	
 	.hidden-md
 		display: none
 
+
+	.panel
+		&__mobile-btn
+			width: 38px
+			height: 38px
+			border-radius: 3px
+			background-color: #d9dce1
+			padding-top: 12px
+			cursor: pointer
+			margin-left: 28px
+			span
+				position: relative
+				display: block
+				width: 20px
+				height: 2px
+				background-color: #000
+				transition: .3s
+				margin-bottom: 4px
+				margin-left: auto
+				margin-right: auto
+			&_toggle
+				span
+					&:nth-of-type(1)
+						top: 6px
+						transform: rotate(45deg)
+					&:nth-of-type(2)
+						opacity: 0
+					&:nth-of-type(3)
+						top: -6px
+						transform: rotate(-45deg)
+
+		&__mobile-nav
+			display: none
+			position: absolute
+			top: 48px
+			right: 15px
+			background-color: #fff
+			width: 280px
+			box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1)
+			&_toggle
+				display: block
+			li
+				position: relative
+				width: 100%
+				border-bottom: 1px solid #e4e8eb
+				&:last-of-type
+					border-bottom: none
+				&.mobile-profile
+					font-size: 0
+					img
+						width: 38px
+						height: 38px
+						margin-right: 14px
+					img, span, svg
+						display: inline-block
+						vertical-align: middle
+					svg
+						position: absolute
+						top: 50%
+						left: 26px
+						transform: translate(-50%, -50%)
+					> a > span
+						position: relative
+						font-size: 15px
+						font-weight: 700
+						width: calc(100% - 38px - 14px)
+						&:after
+							content: ''
+							display: inline-block
+							vertical-align: middle
+							width: 0
+							height: 0
+							border-style: solid
+							border-width: 6px 4px 0 4px
+							margin-left: 4px
+							position: absolute
+							top: 50%
+							right: 0
+							transform: translateY(-50%)
+							border-color: #a6b2bb transparent transparent transparent
+					ul
+						display: none
+						border-top: 1px solid #e4e8eb
+						a
+							position: relative
+							padding-left: 50px
+
+			a
+				display: block
+				padding: 15px 20px
+				font-size: 16px
+				&:hover
+					background-color: #E6E9EE
+
+		&__mobile-alerts
+			border-top: 1px solid #e4e8eb
+			padding-top: 17px
+			padding-bottom: 18px
+			padding-left: 30px
+			padding-right: 30px
+			.lk-link
+				a
+					padding: 0
+					background: none
+
+			
+	.main-slide___btns_md-mt
+		margin-top: 36px
+
+	.product__section
+		padding-bottom: 0
+	
+	.filter-line
+		padding-bottom: 0
+		&__wrap
+			flex-wrap: wrap
+			
+		&__input, &__select
+			width: 33.333%
+		&__input, &__select, .input_date + .col-small
+			margin-bottom: 20px
+		.input_date + .col-small
+			width: 33.333%
+			.btn
+				width: 100%
+		.filter-line__input.input_date
+			width: (100% - 33.333%)
+			.input__case
+				width: calc(50% - 9px)
+
+	.filter-line
+		.checkbox_check-only
+			margin-bottom: 20px
+		&__wrap
+			width: 100%
+		&__btns
+			margin-bottom: 20px
+			
+	.block__subtitle_lh
+		br
+			display: none
+
+	.items
+		&__item
+			&:nth-of-type(3)
+				// display: none
+			&_sm-block
+				.items
+					&__img, &__content
+						width: 100%
+
+					&__img
+						img
+							width: auto
+
+					&__content
+						padding-left: 0
+						margin-top: 10px
+
+	.items_mobile-2
+		.items
+			&__item
+				&:nth-of-type(3)
+					display: none
+						
+						
+						
+	.main-slide___btns-item_sm
+		height: 42px
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0
+
+	.main-title.main-title_md
+		margin-top: 0
+		margin-top: 18px
+
+	.products-wrap__checkbox
+		margin-left: 0
+		display: block
+	.product__data-top_mr, .product__data-line_mr
+		margin-right: 0
+
+	.product__aside_pt
+		padding-top: 10px
+
+
+	// Main
+	.section-content, .page-content
+		width: 950px
+		padding-left: 15px
+		padding-right: 15px
+
+	.section-about-list .text-blocks-list-item
+		position: relative
+		top: 0
+		left: 0
+		display: inline-block
+		vertical-align: top
+		padding-right: 0
+		text-align: left
+		width: 50%
+
+	.section-inner-about
+		padding-top: 15px
+		background: none
+		text-align: center
+		min-height: 1px
+		h5.col-30
+			width: 100%
+			// text-align: center
+			margin-bottom: 20px
+
+		.circle-block
+			margin-left: auto
+			margin-right: auto
+
+		.section-about-list
+			// text-align: center
+			justify-content: center
+
+
+	.section-content
+		padding-top: 25px
+		padding-bottom: 25px
+
+	.main-slide
+		padding-bottom: 30px
+
+	.section-inner-steps
+		background: none
+		height: auto
+
+	.section-steps-list-item, .section-advantages-list-item
+		padding-right: 10px
+		padding-left: 10px
+
+	h6
+		font-size: 20px
+
+	.section-inner-steps .section-cta
+		margin-left: auto
+		margin-right: auto
+		display: block
+		text-align: center
+		max-width: 220px
+	.section-partners-list-item
+		width: 33.333%
+		&:last-of-type
+			display: none
+
+	.section-contacts
+		padding-top: 0
 @media screen and (max-width: 992px)
 	.case
 		width: 750px
 
+	.input, .select
+		margin-bottom: 17px
+		&__title
+			margin-bottom: 10px
+			
+
+
+
+	.block
+		&__subtitle
+			font-size: 20px
+		&__file-clip
+			position: relative
+			padding-left: 40px
+			svg
+				position: absolute
+				top: 50%
+				left: 7px
+				transform: translateY(-50%)
+			label
+				width: 75px
+			span
+				display: inline
+				line-height: normal
+
+		&__foot
+			align-items: center
+			
+			
+
+	.main-slide__subtitle
+		font-size: 16px
+		letter-spacing: 0.64px
+		margin-bottom: 12px
+
+	.main-slide___btns_md-mt
+		margin-top: 0
+
+
+	.main-slide___btns-item
+		padding: 0 5px
+		height: 48px
+		line-height: 18px
+		display: flex
+		justify-content: center
+		align-items: center
+		&:nth-of-type(2)
+			margin-top: 20px
+
+	.main-slide___btns-item_sm-mt
+		margin-top: 10px
+	.items
+		&__img
+			width: 100px
+			img
+				width: 100px
+				height: auto
+		&__title
+			line-height: 21.5px
+			
+		&__content
+			width: calc(100% - 100px)
+			padding-left: 10px
+			// line-height: 20px
+
+	.apps
+		&__wrap
+			background: #fff
+			border-radius: 4px
+			
+
+	.block__policy
+		padding-top: 12px
+			
+			
+			
+
+	.main-title
+		font-size: 30px
+		margin-top: -7px
+		margin-bottom: 12px
+
 	
-
-
+	.profile__status-title
+		font-size: 14px
+	.profile__nav
+		padding-bottom: 0
+	.profile__name
+		line-height: 22px
+		margin-bottom: 11px
+	.block
+		&_aside
 	.hidden-md
 		display: block
 
 	.hidden-sm
 		display: none
 
+	.row-
+		margin-left: -9px
+		margin-right: -9px
+
+	.col
+		padding-left: 9px
+		padding-right: 9px
+
+	.checkboxs
+		&__checkbox
+			margin-right: 20px
+	.checkbox
+		label
+			padding-left: 30px
+
+	.input_default .input__wrap_big
+		width: 140px
+
+	.input_default .input__desc
+		margin-top: 9px
+
+	.textarea_default .textarea__title
+		margin-bottom: 10px
+	
+	.checkboxs
+		margin-bottom: 15px
+		&__title
+			margin-bottom: 9px
+	.block__checkboxs
+		margin-bottom: 0
+	.block__btn
+		margin-left: 9px
+		margin-right: 9px
+			
+	.address__line
+		margin-bottom: 0
+
+	.form-group__wrap.no-wrap
+		.input_default
+		.form-group__text
+			// width: 18px
+
+	.opening 
+		margin-top: 20px
+		&__list
+			margin-right: 0
+			margin-bottom: 10px
+
+		&__item
+			width: calc((100% / 7) - 8px)
+			
+			
+		&__checkbox
+			margin-top: -17px
+			
+	.col-lg-ml-2
+		margin-left: 0
+
+	.page_more
+		padding-top: 30px
+		padding-bottom: 30px
+
+	.photos
+		margin-bottom: 15px
+
+	.product__btn span
+		display: flex
+		justify-content: center
+		align-items: center
+
+	.product__info
+		li
+			width: 100%
+			&:last-of-type
+				margin-bottom: 0
+
+	.photos__no-photo
+		width: 100%
+
+	#col-right
+		.block_product
+			min-height: 1px !important
+	.transactions__text
+		margin-bottom: 20px
+
+	.alerts
+		margin-top: 65px
+		margin-bottom: 118px
+		&__wrap
+			width: 170px
+			height: 170px
+			margin-left: auto
+			margin-right: auto
+		&__icon
+			line-height: 170px
+			svg
+				width: 95px
+		&__count
+			font-size: 30px
+			width: 50px
+			height: 50px
+			line-height: 46px
+			
+	.desc_big
+		font-size: 14px
+
+	.popup__addresses
+		display: none
+
+	.increment__btn
+		margin-bottom: 17px
+
+	.popup__info
+		margin-bottom: 12px
+
+	.popup
+		&_auth
+			padding-top: 15px
+			.popup
+				&__links, &__form
+					padding: 15px
+					width: 100%
+				&__links
+					order: 2
+					background: none
+					.popup
+						&__title
+							display: none
+							
+					
+				&__form
+					order: 1
+					padding: 8px
+
+					
+				&__title
+					padding-left: 0
+
+	.popup_auth .popup__form .popup__title
+		padding-left: 8px
+		margin-bottom: 15px
+
+	.popup_auth .popup__btn
+		margin-bottom: 16px
+
+	.popup_auth .popup__btn-submit
+		width: 100%
+					
+	// Main
+	.section-content, .page-content
+		width: 750px
+	h6
+		font-size: 16px
+	.section-contacts .section-content
+		top: 65px
 @media screen and (max-width: 767px)
 	.case
 		width: 100%
 
 
+	.page
+		&_bg
+			padding-top: 30px
+			padding-bottom: 30px
 	
+	.main-slide
+		&__item
+			margin-bottom: 27px
 
+	.apps
+		margin-top: 0
 
 	.hidden-sm
 		display: block
 
 	.hidden-xs
 		display: none
+
+	.panel
+		&__logo
+			margin-right: 0
+			
+		&__mobile-btn
+			margin-left: auto
+
+			
+		&__mobile-alerts
+			display: flex
+
+	.search-panel
+
+	.search, .search-panel__btn-lk, .search-panel__btn-partner
+		width: 100%
+
+	.search-panel__btn-lk, .search-panel__btn-partner
+		margin-top: 10px
+
+	.apps
+		&__wrap
+			background-position: 0 0
+			border-radius: 4px
+			background-color: #fff
+			background-image: url('../../img/apps-aside.png')
+			background-size: 100% auto
+			padding: 15px
+
+		&__title
+			margin-bottom: 32px
+			margin-bottom: 10px
+			span
+				font-size: 25px
+				display: block
+				text-align: center
+				margin-bottom: 5px
+				margin-right: 0
+				letter-spacing: 1.16px
+			img
+				display: block
+				width: 220px
+				margin-left: auto
+				margin-right: auto
+		&__desc
+			font-size: 16px
+			text-align: center
+			letter-spacing: 0.64px
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 10px
+		&__btns
+			
+		&__btn
+			width: 100%
+			margin-right: 0
+			margin-bottom: 8px
+			&:last-of-type
+				margin-bottom: 0
+			span
+				width: 85px
+
+
+	.items
+		&__img, &__content
+			width: 100%
+	
+		&__img
+			img
+				display: block !important
+				width: auto
+				margin-left: auto
+				margin-right: auto
+			
+	
+		&__content
+			padding-left: 0
+			padding-top: 10px
+			
+
+	.page
+		&__aside
+			margin-bottom: 25px
+
+	.main-title
+		margin-top: 0
+
+
+	.input__btn-add
+		order: 1
+
+	.input__wrap_has-btn-add
+		order: 2
+
+	.checkboxs
+		&__checkbox
+			margin-right: 0
+			display: block
+			width: 100%
+			margin-bottom: 5px
+			&:last-of-type
+				margin-bottom: 0
+			label
+				padding-right: 5px
+
+	.select
+		&_day, &_month, &_year
+			width: 70px
+		&_year
+			width: 77px
+	.jq-selectbox__select-text
+		width: calc(100% - 15px)
+		height: 21px
+		overflow: hidden
+		margin-left: -5px
+
+	.input_default .input__wrap_small
+		width: 40px
+		padding-left: 3px
+		padding-right: 3px
+	.input_default .input__wrap_len-11
+		width: 110px
+	.input_default .input__text_ml
+		display: block
+		margin-left: 10px
+
+	.input_phone-wrap
+		.input__case
+			margin-bottom: -15px
+			align-items: flex-start
+		.input__wrap
+			margin-bottom: 15px
+		.input__text
+			padding-top: 10px
+
+	.input__wrap_has-btn-add, .input__btn-add
+		order: 0
+		width: 100%
+
+	.input__btn-add
+		display: none
+
+	
+
+	.profile__avatar-img
+		max-width: 230px
+		margin-left: auto
+		margin-right: auto
+
+	.profile__avatar-remove
+		right: 50%
+		margin-right: -115px
+
+	.form-group__text
+		display: none
+
+	.form-group__wrap.no-wrap
+		flex-wrap: wrap
+		.input
+			width: 100%
+
+	.opening 
+		&__list, &__item, &__inputs, &__checkbox
+			width: 100%
+			margin-bottom: 3px
+			label
+				width: 100%
+		&__item
+			margin-right: 0
+			
+		&__inputs
+			margin-right: 0
+
+		&__checkbox
+			margin-top: 0
+			
+			
+	.map
+		margin-bottom: 15px
+
+	.radio
+		display: block
+		width: 100%
+		margin-right: 0
+		margin-bottom: 10px
+
+	.upload-photos
+		&__item
+			display: none
+			&:nth-of-type(1)
+				width: 100%
+				display: block
+
+	.schedule
+		&__item
+			p
+				font-size: 12px
+			
+
+	.product
+		&__title
+			width: 100%
+			font-size: 24px
+			line-height: 28px
+
+		&__price
+			font-size: 24px
+		
+		&__data-line
+			margin-bottom: 15px
+			li
+				width: 100%
+		&__text
+			margin-bottom: 20px
+			
+	.product__aside-btns
+		display: none
+
+	.r
+		&:before
+			top: 17px
+			right: 4px
+		&:after
+			top: 21px
+			right: 4px
+		&:before, &:after
+			width: 11px
+			height: 3px
+
+
+	.in-map
+		padding: 10px
+
+
+	.filter-line
+		padding-bottom: 0
+		&__wrap
+			flex-wrap: wrap
+			
+		&__input, &__select
+			width: 100%
+		&__input, &__select, .input_date + .col-small
+			margin-bottom: 20px
+		.input_date + .col-small
+			width: 100%
+			.btn
+				width: 100%
+		.filter-line__input.input_date
+			width: 100%
+			.input__case
+				width: calc(50% - 9px)
+	
+	.tabs__nav
+		li
+			width: 100%
+		a
+			border-radius: 0 !important
+
+	.btns-control
+		&__item
+			width: 100%
+			margin-bottom: 8px
+			&:last-of-type
+				margin-bottom: 0
+			
+	.checkbox_pt
+		padding-top: 0
+
+	.sub-popup__btn
+		display: block
+		margin-left: 0
+		margin-top: 10px
+	.sub-popup__text
+		width: 100%
+
+	.sub-popup__table
+		overflow-x: scroll
+
+	.popup__title
+		font-size: 24px
+
+	.catalog
+		&__img
+			margin-bottom: 15px
+			img
+				margin-left: auto
+				margin-right: auto
+
+	.filter-line
+		.checkbox_check-only
+			display: none
+
+	.filter-line__btn
+		width: 100%
+		margin-right: 0
+		&s
+
+		&:first-of-type
+			margin-bottom: 8px
+
+	.filter-line__wrap
+		width: auto
+
+	.transactions__text
+		display: none
+
+	.transactions__inputs
+		width: 100%
+
+	.transactions__dates
+		margin-bottom: 0
+
+	.transactions__inputs .input__case
+		width: 100%
+		margin-bottom: 8px
+		&:last-of-type
+			margin-bottom: 0
+	.transactions__inputs .input__text
+		display: none
+
+	.alerts
+		margin-top: 20px
+		margin-bottom: 20px
+
+	.main-slide__item
+		min-height: 1px
+
+	.btn-add-alert
+		margin-bottom: 15px
+	
+	.messager__list
+		.messager__persona
+			display: none
+
+	.messager__search-wrap
+		display: none
+
+	.messager__nav
+		width: 80px
+
+	.messager__area
+		width: calc(100% - 80px)
+
+	.messager__item
+		padding: 19.5px
+
+
+	.products-wrap__title
+		font-size: 18px
+		line-height: 22px
+		padding-right: 13px
+	.products-wrap__checkbox
+		display: none
+
+	.popup__btns, .popup__btn
+		width: 100%
+
+	.popup__btn
+		margin-bottom: 8px
+
+	.main-slide__tabs-nav
+		width: 100%
+		li
+			width: 100%
+
+	// Main
+	.section-content, .page-content
+		width: 100%
+	h1, h2, h3, h4, h5, h6
+		line-height: normal
+	h1
+		font-size: 36px
+	h2
+		font-size: 30px
+	h3
+		font-size: 28px
+	h4
+		font-size: 26px
+	h5
+		font-size: 18px
+	.section-steps-list-item, .section-advantages-list-item
+		width: 50%
+		margin-bottom: 40px
+
+	.section-advantages-list
+		padding-top: 25px
+
+	.section-services-list
+		margin-top: 25px
+	.text-blocks-list-item
+		width: 100%
+		margin-bottom: 20px
+	.section-services-list-item h6
+		margin-bottom: 0
+		padding-bottom: 0
+	.large-circle
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 0
+	.section-inner-steps .section-cta
+		margin-top: 10px
+
+	#reviews
+		display: none
+
+	.form-element
+		width: 100%
+		margin-bottom: 10px
+		border-radius: 3px
+
+	.form-row
+		white-space: normal
+
+	.section-questions
+		background-size: cover
+
+	.send-question-form
+		margin-bottom: 0
+		margin-top: 0
+	.section-questions-paragraph
+		margin-bottom: 25px
+		font-size: 18px
+		margin-top: 5px
+	.section-contacts
+		padding-top: 168px
+	.section-contacts .section-content
+		top: 0
+	.section-contacts-row-item
+		line-height: 40px
+	.section-contacts-row
+		height: 40px
+	.section-contacts .section-content
+		padding: 0
+		margin-left: 0
+		left: 0
+		width: 100%
+	.section-contacts-text
+		width: calc(100% - 85px)
+	.section-contacts h4
+		margin-bottom: 10px
+	.section-partners-list
+		border: none
+		margin-top: 20px
+		margin-bottom: 0
+	.section-partners-list-item
+		height: auto
+		line-height: normal
+		font-size: 0
+		border: none
+	.section-services-list-item:first-child
+		padding-right: 0
+	.section-services-list-item p
+		min-height: 35px
+		height: auto !important
+		line-height: normal !important
+	.section-questions-paragraph
+		line-height: normal !important
+	.section-cta
+		height: auto
+		line-height: normal
+		padding: 10px 10px
+	.services-btn-line
+		margin-top: 15px
+	.large-circle
+		margin-bottom: 15px
+	.section-advantages-list
+		margin-top: 0
+	footer
+		height: auto
+		padding-top: 25px
+		padding-bottom: 25px
+		.footer-left, .footer-right
+			float: none !important
+			padding: 0
+		.footer-right
+			line-height: normal
+			margin-top: 10px
+	.section-steps-list-item .xsmall-circle
+		display: none
+
+	
+	.form-element[type="submit"]
+		height: auto
+		line-height: normal
+		padding: 10px 10px
+
+	.main-slide
+		&__title
+			font-size: 36px
+		&__desc
+			font-size: 24px
+
+@media screen and (max-width: 520px)
+	.messager
+		margin-left: -15px
+		margin-right: -15px
+		border-radius: 0
+	.message__date, .message__img
+		display: none
+
+	.message__wrap
+		width: 100%
+		margin-left: 0
+		margin-right: 0
+
+	.messager__body
+		padding: 10px
+
+	.messager__file
+		display: none
+
+	.messager__btn
+		margin-left: 20px
+@media screen and (max-width: 420px)
+	.photos__no-photo
+		height: 200px
+	.section-about-list .text-blocks-list-item
+		width: 100%

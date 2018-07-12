@@ -90,13 +90,12 @@
       margin-left: 100% / $gridCols * $i
       $i: $i + 1
 
-@media screen and (min-width: 1200px)
-  @include grid(12, "lg")
-  @include gridMargin(12, "lg")
-  .col-lg-12.row-
-    width: auto
+@include grid(12, "lg")
+@include gridMargin(12, "lg")
+.col-lg-12.row-
+  width: auto
 
-@media screen and (max-width: 1199px)
+@media screen and (max-width: 1219px)
   .case
     width: 950px
   @include grid(12, "md")

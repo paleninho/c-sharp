@@ -29,10 +29,6 @@ header, nav, main, section, article, aside, footer, li, .block
 	display: block
 
 
-h1, h2, h3, h4, h5, h6
-	display: inline
-	font-size: inherit
-	font-weight: inherit
 
 ul
 	display: flex
@@ -96,6 +92,8 @@ img
 					width: 200px
 				&_md
 					width: 82px
+				&_lg
+					width: 100px
 			&__desc
 				color: #6f7175
 				font-size: 14px
@@ -125,7 +123,8 @@ img
 	&_disabled
 		.input
 			&__wrap
-				background-color: rgba(0, 0, 0, 0.03)
+				color: $color-1
+				background-color: #ebedf1
 			
 	&_phone-wrap
 		font-size: 0
@@ -189,10 +188,17 @@ img
 	&_bg
 		&-yellow
 			background-color: #f1c400
+			&:hover
+				background-color: #d9dce1
 		&-gray
 			background-color: #d9dce1
+			&:hover
+				background-color: #f1c400
 	&_border-transparent
 		border: 1px solid rgba(0,0,0,0.2)
+		&:hover
+			border-color: #d9dce1
+			background-color: #d9dce1
 	&_shadow
 		box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1)
 	&_extra-small
@@ -233,6 +239,8 @@ img
 	margin-left: auto
 	margin-right: auto
 
+input::disabled
+	color: #6f7175
 
 .select
 	&__title
@@ -278,7 +286,8 @@ img
 
 	&_disabled
 		.jq-selectbox__select
-			background-color: rgba(0, 0, 0, 0.03)
+			color: $color-1
+			background-color: #ebedf1
 			cursor: default
 		
 .jq-selectbox
@@ -802,10 +811,12 @@ img
 		padding-bottom: 40px
 	&_mt
 		margin-top: 27px
-	&_alerts
+	&_full
 		height: calc(100% - 56px)
 	&_list
 		height: 100%
+	&_auth
+		padding: 0
 	&__title
 		font-size: 18px
 		font-weight: 700
@@ -820,6 +831,8 @@ img
 		letter-spacing: 0.96px
 		text-transform: uppercase
 		margin-bottom: 20px
+		&_lh
+			line-height: 26px
 	&__input
 		margin-bottom: 25px
 	&__select
@@ -936,9 +949,8 @@ img
 			width: 20px
 			height: 20px
 			position: absolute
-			top: 50%
+			top: 2px
 			left: 0
-			transform: translateY(-50%)
 			background-color: #fff
 			border: 1px solid #e1e4ed
 			border-radius: 3px
@@ -950,13 +962,18 @@ img
 			width: 20px
 			height: 20px
 			position: absolute
-			top: 1px
+			top: 3px
 			left: 0
 			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAAnUlEQVQ4T5WQYQ2DMBBGHw6QMAdMAhKQwCSgZJkCkIADwEGtzMHykV7SdNcm7Z9Lmrx3930d7W8G3sAGLF0jL3hNmE+LIIfl+ZqgBwbgKlzkwsAogeADeMZcr0xShIEgQYjbjVM5JqnCAjyB/iVRnLSwO7POjkvvhRbhzK7wqviDTaCpHmoSF04FNUkRzgWepAp7ApPswAOY0sK8Yn4TayW9VSXgGQAAAABJRU5ErkJggg==)
 			background-repeat: no-repeat
 			background-position: center
 			transform: scale(0)
 			transition: .3s
+
+		a
+			border-color: $color-1
+			&:hover
+				border-color: transparent
 
 	&_check-only
 		width: 20px
@@ -1114,10 +1131,35 @@ img
 		a
 			display: block
 			font-size: 16px
-			padding: 13px 0 13px 55px
+			padding: 13px 10px 13px 55px
 			&:hover
 				background-color: #f1c400
 
+	&__upload
+		width: 100%
+		height: 300px
+		border-radius: 3px
+		border: 1px dashed #e4e8eb
+		background-color: #ffffff
+		padding: 52px 29px 0
+		text-align: center
+		&-icon
+			margin-bottom: 36px
+
+		&-btn-wrap
+			input
+				display: none
+
+		&-btn
+			margin-bottom: 33px
+
+		&-desc
+			font-size: 14px
+			font-weight: 300
+			max-width: 130px
+			margin-left: auto
+			margin-right: auto
+		
 		
 
 
@@ -1464,7 +1506,7 @@ img
 	&__title
 		text-transform: none
 		letter-spacing: 0
-		max-width: 615px
+		width: calc(100% - 81px - 130px)
 		line-height: 44px
 		margin-bottom: 23px
 	
@@ -1538,8 +1580,20 @@ img
 	&__section
 		padding-bottom: 20px
 		
+	&__data-top
+		&_mr
+			margin-right: -290px
+
+	&__data-line
+		&_mr
+			margin-right: -290px
+		
+		
+
 	&__aside
 		padding-top: 10px
+		&_pt
+			padding-top: 151px
 		&-btns
 			padding: 10px
 			background-color: #f3f4f7
@@ -1564,15 +1618,19 @@ img
 		
 
 	&__info
+		margin-left: -14px
+		margin-right: -14px
 		li
 			font-size: 16px
 			width: 50%
 			margin-bottom: 25px
+			padding-left: 14px
+			padding-right: 15px
 			strong
 				display: block
 				margin-bottom: 4px
 			span
-				line-height: 0.01px
+				display: block
 		
 
 .seller
@@ -1733,14 +1791,10 @@ img
 
 
 .products
-	overflow-x: scroll
+	overflow-x: auto
 	font-size: 0
 	&__head
-		padding: 0 20px
 		margin-bottom: 18px
-	&__head, &__body
-		margin-left: -19px
-		margin-right: -19px
 	&__head
 		.products
 			&__item
@@ -1749,11 +1803,29 @@ img
 				text-transform: uppercase
 		&_more
 			margin-bottom: 32px
+
+	&__body
+		
+	&__line
+		padding-left: 0
+		padding-right: 0
+		
 	&__item
 		position: relative
 		padding-left: 19px
 		padding-right: 19px
 		font-size: 16px
+		ul
+			li
+				width: 100%
+				padding-left: 12px
+				position: relative
+				&:before
+					content: '•'
+					position: absolute
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
 		&_checkbox
 			width: (20px + (19px * 2))
 		&_status
@@ -1788,16 +1860,19 @@ img
 				right: auto
 				left: 75px
 		&_btns
-			width: (435px + (19px * 2))
-			padding-right: 0
+			width: (452px + (19px * 2))
 			.control
 				right: auto
 				left: 123px
 		&_seller
 			width: (205px + (19px * 2))
+			&-more
+				width: (277px + (19px * 2))
 			.control
 				right: auto
 				left: 93px
+		&_renewal
+			width: (96px + (19px * 2))
 
 		&_ordered
 			width: (82px + (19px * 2))
@@ -1807,6 +1882,12 @@ img
 			.control
 				right: auto
 				left: 140px
+
+		&_price-conditions
+			width: (245px + (19px * 2))
+		
+		&_answer
+			width: (355px + (19px * 2))
 
 		&_terms
 			width: (150px + (19px * 2))
@@ -1819,7 +1900,14 @@ img
 			.control
 				right: auto
 				left: 64px
-
+		&_office
+			width: (115px + (19px * 2))
+			&-nn
+				width: (155px + (19px * 2))
+		&_text
+			width: (335px + (19px * 2))
+			&-large
+				width: (445px + (19px * 2))
 		&_t
 			&-code
 				width: (107px + (19px * 2))
@@ -1897,11 +1985,26 @@ img
 			font-size: 16px
 			margin-bottom: 16px
 		&-btn
+			&s
+				margin-top: 15px
 			svg, span
 				display: inline-block
 				vertical-align: middle
 			svg
 				margin-right: 8px
+				position: relative
+				top: 2px
+			&-count
+				min-width: 100px
+				svg
+					top: 2px
+					position: relative
+			&_mr
+				margin-right: 8px
+
+	&__rating
+		margin-left: 17px
+		
 
 	&__body
 		.products
@@ -1958,6 +2061,13 @@ img
 	position: absolute
 	top: 5px
 	right: 20px
+	&_line
+		top: 0
+		right: 0
+		left: auto !important
+		display: inline-block
+		position: relative
+		margin-left: 5px
 	&__item
 		cursor: pointert
 		width: 0
@@ -2073,19 +2183,112 @@ img
 	display: none
 	font-size: 16px
 	font-family: $font-family-1
+	&_extra
+		width: 875px
 	&_large
 		width: 770px
 	&_normal
 		width: 575px
 	&_small
 		width: 475px
+	&_auth
+		width: 975px
+		.popup
+			&__title
+
+				
+			&__links, &__form
+				width: 50%
+
+			&__links
+				background: url('../../img/auth-bg.png') no-repeat center
+				background-size: cover
+				padding: 30px 30px 30px 20px
+				.popup
+					&__title
+						margin-bottom: 35px
+				&-list
+					li
+						width: 100%
+						margin-bottom: 8px
+						&:last-of-type
+							margin-bottom: 0
+					a
+						display: block
+						color: #fff
+						box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1)
+						border-radius: 3px
+						line-height: 48px
+						font-size: 0
+						u, svg, span
+							display: inline-block
+							vertical-align: middle
+						u
+							width: 75px
+							height: 100%
+							text-align: center
+							border-right: 1px solid rgba(0,0,0,.1)
+						span
+							font-size: 16px
+							font-weight: 700
+							padding-left: 28px
+							padding-right: 28px
+					
+					.fb
+						background-color: #4d6da6
+						&:hover
+							background-color: darken(#4d6da6, 10%)
+					.tw
+						background-color: #59a3dd
+						&:hover
+							background-color: darken(#59a3dd, 10%)
+
+					.gp
+						background-color: #e46145
+						&:hover
+							background-color: darken(#e46145, 10%)
+
+					.vk
+						background-color: #6996c7
+						&:hover
+							background-color: darken(#6996c7, 10%)
+						.icon-v
+							font-family: "Tahoma"
+							font-size: 19px
+							color: #fff
+							font-style: normal
+							font-weight: 700
+							line-height: normal
+
+			&__form
+				padding: 30px 6px 35px 14px
+				.popup
+					&__title
+						padding-left: 14px
+						margin-bottom: 25px
+
+				
+
+			&__btn
+				padding-left: 10px
+				padding-right: 10px
+				margin-bottom: 25px
+				margin-right: 0
+				min-width: 100%
+				&-submit
+					min-width: 135px
+					margin-top: 5px
+				
+				
+				
 	&__title
 		font-size: 30px
 		font-weight: 700
 		text-transform: uppercase
 		letter-spacing: 1.2px
 		margin-bottom: 12px
-	
+		&_mb-more
+			margin-bottom: 25px
 	&__subtitle
 		font-size: 18px
 		font-weight: 700
@@ -2126,12 +2329,44 @@ img
 		margin-bottom: 25px
 		&_mb-small
 			margin-bottom: 18px
+		&_more-mb
+			margin-bottom: 37px
 
 	&__alert
 		margin-bottom: 18px
-		
+		&_more-mb
+			margin-bottom: 37px
 		
 
+	&__addresses
+		margin-top: 25px
+		margin-bottom: 38px
+		&-head
+			margin-bottom: 17px
+			.popup__addresses-item
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+
+		&-body
+		&-line
+			border-radius: 3px
+			background-color: #ebedf1
+			letter-spacing: 0.64px
+			margin-bottom: 8px
+			padding: 18px 0
+			&:last-of-type
+				margin-bottom: 0
+			.popup__addresses-item
+				
+
+				
+	&__message
+		margin-bottom: 27px
+		.textarea__wrap
+			height: 175px
+		
+		
 		
 		
 
@@ -2160,6 +2395,9 @@ img
 		margin-top: 17px
 	&_mb
 		margin-bottom: 23px
+	&_big
+		font-size: 16px
+		line-height: 20px
 
 .data
 	margin-bottom: 15px
@@ -2215,6 +2453,7 @@ img
 	position: relative
 	padding: 10px 20px 10px 53px
 	border-radius: 3px
+	background-color: #ebedf1
 	&_error
 		background-color: #fddad2
 	&__icon
@@ -2245,6 +2484,16 @@ img
 		transition: .3s
 		&:hover
 			border-color: transparent
+
+	&_small
+		span
+			font-size: 14px
+			font-weight: 400
+			border-color: transparent
+			color: #5d6064
+			&:hover
+				border-bottom: 1px solid #5d6064
+
 
 
 .items
@@ -2361,8 +2610,427 @@ img
 			display: block
 			font-size: 16px
 		
+	&_aside
+		.apps
+			&__wrap
+				background-position: 0 0
+				border-radius: 4px
+				background-color: #fff
+				background-image: url('../../img/apps-aside.png')
+				background-size: 100% auto
+
+			&__title
+				margin-bottom: 32px
+				span
+					font-size: 25px
+					display: block
+					text-align: center
+					margin-bottom: 5px
+					margin-right: 0
+					letter-spacing: 1.16px
+
+			&__desc
+				font-size: 16px
+				text-align: center
+				letter-spacing: 0.64px
+			&__btns
+				
+			&__btn
+				width: 100%
+				margin-right: 0
+				margin-bottom: 8px
+				&:last-of-type
+					margin-bottom: 0
+				span
+					width: 85px
+				
+				
+				
+				
 
 
+
+
+.alerts
+	margin-top: 38px
+	margin-bottom: 60px
+	&__wrap
+		width: 220px
+		height: 220px
+		margin-left: auto
+		margin-right: auto
+		background-color: #ebedf1
+		border-radius: 50%
+		font-size: 0
+		position: relative
+
+	&__icon
+		line-height: 220px
+		text-align: center
+		svg
+			display: inline-block
+			vertical-align: middle
+
+	&__count
+		font-size: 36px
+		text-transform: uppercase
+		letter-spacing: -0.24px
+		width: 65px
+		height: 65px
+		line-height: 62px
+		background-color: #ea001b
+		position: absolute
+		top: 10px
+		right: 10px
+		color: #fff
+		text-align: center
+		border-radius: 50%
+
+
+		
+.btn-add-alert
+	margin-bottom: 46px
+
+
+.messager
+	box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1)
+	border-radius: 3px
+	background-color: #ffffff
+	&__nav, &__area
+		height: 845px
+
+	&__nav
+		width: 295px
+		border-right: 1px solid #e4e8eb
+	
+	&__area
+		width: calc(100% - 295px)
+		
+		
+	&__search
+		position: relative
+		width: 100%
+		&-wrap
+			padding: 18px
+			height: 80px
+			border-bottom: 1px solid #e4e8eb
+		&-icon
+			position: absolute
+			top: 50%
+			left: 12px
+			transform: translateY(-50%)
+			margin-top: 2px
+		&-input
+			border: 1px solid #e4e8eb
+			border-radius: 3px
+			font-size: 14px
+			font-family: $font-family-1
+			height: 39px
+			padding: 0 15px 0 38px
+			display: block
+			width: 100%
+			&::placeholder
+				opacity: 1
+				color: #5d6064
+	
+	&__list
+		overflow: auto
+		height: calc(100% - 80px)
+		
+	&__item
+		position: relative
+		padding: 18px
+		border-bottom: 1px solid #e4e8eb
+		transition: .3s
+		cursor: pointer
+		&_message, &_selected
+			background-color: #f7f2dc !important
+		&_selected
+			cursor: default
+		&_selected
+			.messager
+				&__text
+					font-weight: 700
+		&:hover
+			background-color: #e4e8eb
+
+					
+
+	&__img
+		width: 40px
+		img
+			width: 40px
+			height: 40px
+			border-radius: 50%
+
+	&__persona
+		width: calc(100% - 40px)
+		padding-left: 17px
+		
+	&__name
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 5px
+		
+	&__text
+		font-size: 14px
+		color: #5d6064
+
+	&__count
+		width: 19px
+		height: 19px
+		line-height: 17px
+		background-color: #f1c400
+		text-align: center
+		font-size: 10px
+		font-weight: 700
+		border-radius: 50%
+		position: absolute
+		top: 19px
+		right: 17px
+		
+
+	&__message
+
+
+	&__head
+		height: 80px
+		padding: 21px
+		border-bottom: 1px solid #e4e8eb
+		overflow: auto
+
+	&__body
+		padding: 20px
+		border-bottom: 1px solid #e4e8eb
+		height: 655px
+		overflow: auto
+
+	&__textarea
+		textarea
+			font-size: 16px
+			font-family: $font-family-1
+			padding: 15px 20px 10px
+			height: 65px
+			resize: none
+			width: 100%
+			display: block
+
+	&__btn
+		margin-left: auto
+		margin-bottom: 20px
+		margin-right: 20px
+		padding: 6px 20px 7px
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.1)
+		span
+			font-size: 14px
+		
+	&__file
+		margin-left: 20px
+		padding-top: 7px
+		
+
+.message
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	font-size: 0
+	margin-bottom: 18px
+	&__img
+		width: 40px
+		margin-bottom: auto
+		img
+			width: 40px
+			height: 40px
+			border-radius: 3px
+	
+	&__wrap
+		position: relative
+		width: calc(100% - ((40px + 13px) * 2)
+		margin-left: 13px
+		margin-right: 13px
+		font-size: 16px
+		font-weight: 300
+		line-height: 20px
+		padding: 10px 15px
+		border-radius: 3px
+	&__date
+		width: 40px
+		font-size: 12px
+		font-weight: 300
+		color: #6e6e6e
+
+	&_to
+		.message
+			&__wrap
+				background-color: #f7f2dc
+				&:before
+					position: absolute
+					left: -6px
+					top: 8px
+					content: ''
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 4.5px 6px 4.5px 0
+					border-color: transparent #f7f2dc transparent transparent
+
+			&__date
+				text-align: right
+				
+
+	&_from
+		.message
+			&__wrap
+				background-color: #f4f4f4 
+				&:before
+					position: absolute
+					right: -6px
+					top: 8px
+					content: ''
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 4.5px 0 4.5px 6px
+					border-color: transparent transparent transparent #f4f4f4
+
+			&__date
+				text-align: left
+				order: 1
+
+			&__wrap
+				order: 2
+				
+			&__img
+				order: 3
+				
+			
+
+
+		
+		
+.rating
+	&__item
+		margin-left: 1.5px
+		margin-right: 1.5px
+		
+
+	
+		
+.cart
+	&__title
+		font-size: 30px
+		font-weight: 700
+		letter-spacing: 1.2px
+		text-transform: uppercase
+		margin-bottom: 15px
+		margin-top: 5px
+		&_mt
+			margin-top: 40px
+
+	&__btn
+		margin-top: 45px
+		padding: 15px 25px
+		margin-bottom: 30px
+
+	&__item
+		
+		&_left
+			padding-right: 26px
+
+		&_right
+			padding-left: 26px
+		
+
+	&__textarea
+		.textarea__wrap
+			height: 244px
+		
+		
+		
+
+.products-wrap
+	margin-bottom: 75px
+	&_open
+		.products-wrap
+			&__head
+				&:after
+					transform: translateY(-50%) rotate(180deg)
+	&:last-of-type
+		margin-bottom: 0
+	&__head
+		box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1)
+		border-radius: 3px
+		padding: 13px 20px
+		background-color: #f1c400
+		position: relative
+		&:after
+			position: absolute
+			top: 50%
+			right: 20px
+			content: ''
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 7px 6px 0 6px
+			border-color: #000000 transparent transparent transparent
+			transition: .3s
+			transform: translateY(-50%)
+	&__title
+		font-size: 24px
+		font-weight: 700
+		letter-spacing: 0.96px
+		display: inline-block
+		text-transform: uppercase
+		cursor: pointer
+	&__title, &__checkbox
+		vertical-align: middle
+	&__checkbox
+		margin-left: 30px
+
+	&__body
+		padding-top: 29px
+		
+
+
+
+.increment
+	&__title
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 12px
+		
+	&__btn
+		font-size: 0
+		line-height: 42px
+		width: 42px
+		height: 42px
+		text-align: center
+		svg
+			margin-right: 0
+	&__input
+		width: 100px
+		margin-left: 13px
+		margin-right: 13px
+		input
+			text-align: center
+		
+		
+
+.color-black
+	&::placeholder
+		opacity: 1
+
+
+.btn-buy
+	padding-left: 10px
+	padding-right: 10px
+	margin-top: 15px
+
+
+.search-panel__btn-partner
+	&:hover
+		color: #fff
+		background-color: #000
 
 .text
 	h2
@@ -2376,6 +3044,38 @@ img
 		&:last-of-type
 			margin-bottom: 0
 	
+.filter
+	&__title
+		font-size: 18px
+		font-weight: 700
+		letter-spacing: 0.72px
+		text-transform: uppercase
+		margin-bottom: 13px
+		
+	&__btn
+		padding-left: 5px
+		padding-right: 5px
+		margin-bottom: 9px
+		&:last-of-type
+			margin-bottom: 0
+		&.btn_line
+			&:hover
+				span
+					border-color: transparent
+			span
+				transition: .3s
+				border-bottom: 1px solid $color-1
+				
+	&__list
+		padding-top: 9px
+		padding-bottom: 20px
+
+	&__checkbox
+		margin-bottom: 15px
+		&:last-of-type
+			margin-bottom: 0
+		
+		
 		
 
 .maxh200
@@ -2386,6 +3086,8 @@ img
 .hidden-lg
 	display: none
 
+.col
+	float: none !important
 
 @keyframes lkLinkLoad
 	0%
