@@ -1,5 +1,6 @@
 /* Including styles files */
 /* Including fonts */
+@import url(../../libs/fancybox/dist/jquery.fancybox.css);
 @font-face {
   font-family: "RobotoCondensed";
   src: url("../../fonts/RobotoCondensedLight.eot");
