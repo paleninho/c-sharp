@@ -30,6 +30,10 @@ ul
 	flex-wrap: wrap
 	justify-content: flex-start
 
+li
+	display: block
+	list-style-image: none
+
 a
 	color: $color-1
 	text-decoration: none
@@ -37,6 +41,7 @@ a
 	transition: .3s
 
 img
+	display: block
 	max-width: 100% !important
 	max-height: 100% !important
 
@@ -46,21 +51,23 @@ input
 	appearance: none
 
 input, textarea, button
-	display: none
+ outline: none
 
 /* Form elements */
 .input
 	position: relative
 	&__wrap
+		display: block
 		font-size: $font-size
 		font-family: $font-family-1
 		background: white
 		width: 100%
-		
+
 
 .textarea
 	position: relative
 	&__wrap
+		display: block
 		font-size: $font-size
 		font-family: $font-family-1
 		background: white
@@ -96,6 +103,10 @@ input, .btn, .slick-slide, textarea
 	margin-left: auto
 	margin-right: auto
 
+
+
+.main-wrap
+	// overflow-x: hidden
 
 
 

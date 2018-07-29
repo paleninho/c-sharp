@@ -2,10 +2,7 @@
   .case {
     width: 950px; }
   .hidden-lg {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
+    display: block; }
   .hidden-md {
     display: none; } }
 
@@ -13,10 +10,7 @@
   .case {
     width: 750px; }
   .hidden-md {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
+    display: block; }
   .hidden-sm {
     display: none; } }
 
@@ -24,9 +18,6 @@
   .case {
     width: 100%; }
   .hidden-sm {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
+    display: block; }
   .hidden-xs {
     display: none; } }

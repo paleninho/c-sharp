@@ -6,6 +6,15 @@
   padding-right: 15px;
   margin: 0 auto; }
 
+.row, .col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
 .row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
