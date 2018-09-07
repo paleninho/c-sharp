@@ -2,25 +2,10 @@
 /* Including fonts */
 @import url(../../libs/fancybox/dist/jquery.fancybox.css);
 @font-face {
-  font-family: "RobotoCondensed";
-  src: url("../../fonts/RobotoCondensedLight.eot");
-  src: url("../../fonts/RobotoCondensedLight.eot?#iefix") format("embedded-opentype"), url("../../fonts/RobotoCondensedLight.woff") format("woff"), url("../../fonts/RobotoCondensedLight.ttf") format("truetype");
+  font-family: "";
+  src: url("../../fonts/");
   font-style: normal;
-  font-weight: 300; }
-
-@font-face {
-  font-family: "RobotoCondensed";
-  src: url("../../fonts/RobotoCondensedRegular.eot");
-  src: url("../../fonts/RobotoCondensedRegular.eot?#iefix") format("embedded-opentype"), url("../../fonts/RobotoCondensedRegular.woff") format("woff"), url("../../fonts/RobotoCondensedRegular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
-
-@font-face {
-  font-family: "RobotoCondensed";
-  src: url("../../fonts/RobotoCondensedBold.eot");
-  src: url("../../fonts/RobotoCondensedBold.eot?#iefix") format("embedded-opentype"), url("../../fonts/RobotoCondensedBold.woff") format("woff"), url("../../fonts/RobotoCondensedBold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 700; }
+  font-weight: 400; }
 
 /* Grid */
 .case {
